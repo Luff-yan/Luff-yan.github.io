@@ -2,11 +2,11 @@
 
 每周日进行一次学习总结。学习教材为 [Java语言程序设计，梁勇](https://pan.baidu.com/s/1dZ9jrolw5ENwbz5matWbQQ)，提取码：1t1d
 
-[TOC]
-
 ### 2021.02.19
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+TOC{:toc}
 
 ```markdown
 Syntax highlighted code block
