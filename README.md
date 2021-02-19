@@ -24,7 +24,7 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
-电子书下载：提取码：1t1d [Java语言程序设计](https://pan.baidu.com/s/1dZ9jrolw5ENwbz5matWbQQ).
+学习教材，提取码：1t1d [Java语言程序设计，梁勇](https://pan.baidu.com/s/1dZ9jrolw5ENwbz5matWbQQ).
 
 ### Jekyll Themes
 
