@@ -1,8 +1,6 @@
 ## Java语言程序设计
 
-You can use the [editor on GitHub](https://github.com/ujson/ujson.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+每周日为学习总结。
 
 ### Markdown
 
