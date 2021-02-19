@@ -1,8 +1,8 @@
 ## Java语言程序设计
 
-每周日为学习总结。
+每周日进行一次学习总结。学习教材为 [Java语言程序设计，梁勇](https://pan.baidu.com/s/1dZ9jrolw5ENwbz5matWbQQ)，提取码：1t1d
 
-### Markdown
+### 2021.02.19
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
@@ -24,7 +24,6 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
-学习教材，提取码：1t1d [Java语言程序设计，梁勇](https://pan.baidu.com/s/1dZ9jrolw5ENwbz5matWbQQ).
 
 ### Jekyll Themes
 
