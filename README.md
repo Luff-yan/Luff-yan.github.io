@@ -4,8 +4,8 @@
 
 <font color=yellow>2021.02.21</font>
 
-这几天学习了第四章的最后一节：字符串的转换与比较
-知道其中几个方法：  
+这几天学习了第四章的最后一节：字符串的转换与比较  
+其中几个方法：  
 比较字符串：equals(),compareTo  
 获取子字符串：substring(beginIndex),substring(beginIndex,endIndex)  
 字符串转换：indexOf(),lastIndexOf()
