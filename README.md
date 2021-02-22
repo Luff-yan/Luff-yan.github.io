@@ -2,7 +2,7 @@
 
 每周日进行一次学习总结。学习教材为 [Java语言程序设计，梁勇](https://pan.baidu.com/s/1dZ9jrolw5ENwbz5matWbQQ)，提取码：1t1d
 
-<font color=yellow>2021.02.21</font>
+<font color=yellow>**2021.02.21**</font>
 
 这几天学习了第四章的最后一节：字符串的转换与比较
 知道其中几个方法：
