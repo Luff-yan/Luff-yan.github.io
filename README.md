@@ -3,8 +3,8 @@
 每周日进行一次学习总结。学习教材为 [Java语言程序设计，梁勇](https://pan.baidu.com/s/1dZ9jrolw5ENwbz5matWbQQ)，提取码：1t1d
   
 **目录**   
-[2021.02.21](#jump)    
-<span id="jump">
+[2021.02.21](#j)    
+<span id="j">
 <font color=yellow>
 2021.02.21 
 </font>
