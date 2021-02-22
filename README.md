@@ -10,8 +10,8 @@
 获取子字符串：substring(beginIndex),substring(beginIndex,endIndex)  
 字符串转换：indexOf(),lastIndexOf()
 
-4.4.5将十六进制转换为十进制数
-说明：提示用户输入一个十六进制数字，显示它对应的十进制数
+4.4.5将十六进制转换为十进制数  
+说明：提示用户输入一个十六进制数字，显示它对应的十进制数  
 程序清单4-4 HexDigitDec.java
 ```
 import java.util.Scanner;  //导入Scanner的包
