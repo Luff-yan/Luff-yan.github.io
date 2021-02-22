@@ -9,7 +9,7 @@
 <font color=yellow>
 2021.02.21 
 </font>
-</span>  
+  
 这几天学习了第四章的最后一节：字符串的转换与比较  
 其中几个方法：  
 比较字符串：equals(),compareTo  
