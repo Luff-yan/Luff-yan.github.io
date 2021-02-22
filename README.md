@@ -2,33 +2,50 @@
 
 每周日进行一次学习总结。学习教材为 [Java语言程序设计，梁勇](https://pan.baidu.com/s/1dZ9jrolw5ENwbz5matWbQQ)，提取码：1t1d
 
-### 2021.02.21
+##2021.02.21
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+这几天学习了第四章的最后一节：字符串的转换与比较
+知道其中几个方法：
+比较字符串：equals(),compareTo
+获取子字符串：substring(beginIndex),substring(beginIndex,endIndex)
+字符串转换：indexOf(),lastIndexOf()
 
-```markdown
-Syntax highlighted code block
+4.4.5将十六进制转换为十进制数
+说明：提示用户输入一个十六进制数字，显示它对应的十进制数
+程序清单4-4 HexDigitDec.java
+```
+import java.util.Scanner;  //导入Scanner的包
 
-# Header 1
-## Header 2
-### Header 3
+public class HexDigit2Dec {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a hex digit: ");
+        String hexString = input.nextLine();  //字符串的输入模式
+        
+        //Check if the hex string has exactly one character
+        if (hexString.length() != 1) {
+            System.out.println("You must enter exactly one character");
+            System.exit(1);
+        }  //查看一下字符串输入是否规范
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+        //Display decimal value for the hex digit
+        char ch = Character.toUpperCase(hexString.charAt(0));
+        //将输入的字符进行大写转换
+        
+        if (ch <= 'F' && ch >= 'A') {
+            int value = ch - 'A' + 10;
+            System.out.println("The decimal value for hex digit "
+            + ch + " is " + value);
+        }
+        else if (Character.isDigit(ch)) {
+            System.out.println("The decimal value for hex digit " + ch + " is " + ch);
+        }
+        else {
+            System.out.println(ch + " is an invalid input");
+        }
+    }
+}
 ```
 
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ujson/ujson.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
