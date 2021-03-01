@@ -3,9 +3,9 @@
 每周日进行一次学习总结。学习教材为 [Java语言程序设计，梁勇](https://pan.baidu.com/s/1dZ9jrolw5ENwbz5matWbQQ)，提取码：1t1d
   
 **目录**   
-[2021.02.21](#jump)   
-[2021.02.28](#jump)   
-<span id="jump">
+[2021.02.21](#jump_1)   
+[2021.02.28](#jump_2)   
+<span id="jump_1">
 <font color=yellow>
 2021.02.21 
 </font>
@@ -53,7 +53,7 @@ public class HexDigit2Dec {
 }
 ```
 
-<span id = "jump">
+<span id = "jump_2">
 <font color = yellow>
 2021.02.28
 </font>
