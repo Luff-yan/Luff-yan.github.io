@@ -85,8 +85,8 @@ for (int i = 1; i <= 100; i++) {   //知道具体的打印次数
 }
 ```
 
-两种退出的语句：
-break:
+两种退出的语句：    
+#break  
 break语句用于跳出整个循环，例如：
 ```
 int i = 1;
@@ -108,7 +108,7 @@ System.out.println("The loop is over!");
 ```
 打印结果是：123456789 The loop is over!
   
-continue:  
+#continue
 continue语句用于跳出一次循环，例如：  
 ```
 int i = 1;
