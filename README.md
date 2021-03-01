@@ -134,4 +134,4 @@ for(int i = 1; i <= 100; i++) {
     }
 ```
 运行结果：  
-![avatar](C:\Users\suwei\Desktop\字符打印.JPG)
+<img src="C:\Users\suwei\Desktop\字符打印.JPG" />
