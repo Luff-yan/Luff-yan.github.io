@@ -58,5 +58,86 @@ public class HexDigit2Dec {
 2021.02.28
 </font>
 
-这几天学习了第六章循环 while, do-while, for
+这几天学习了第六章循环   
+三种循环方式：  
+while, do-while, for  
+两种退出循环的语句：  
+break,continue  
+  
+while和do-while用于不知道次数的循环
+例如：
+```
+Scanner input = new Scanner(System.in);
+String user = inputnextLine();      //这里是用户输入的内容
+while (user == 'quit') {      //与用户输入的内容判断是否相同，是则退出
+    循环体;
+}               
+```
+注：do-while 就是循环体在 while 循环前面，功能一样。  
 
+注：用 '==' 比较字符不太适合，正式的比较 用 compareTo()方法更好一些。因为 '==' 比较的是内存地址，而 compareTo() 比较的是字符内容。  
+
+for用于有具体次数的循环  
+例如:  
+```
+for (int i = 1; i <= 100; i++) {   //知道具体的打印次数
+    System.out.println("hello world!");
+}
+```
+
+两种退出的语句：
+break:
+break语句用于跳出整个循环，例如：
+```
+int i = 1;
+while (i <= 100) {
+    if (i == 10)        //当 i = 10时，执行 break 语句
+        break;
+    System.out.print(i);
+    i++;
+}
+System.out.println("The loop is over!");   //执行 break 语句后，打印
+
+//第二种方法
+for (int i = 1; i <= 100; i++) {
+    if (i == 10) 
+        break;
+    System.out.print(i);
+}
+System.out.println("The loop is over!");
+```
+打印结果是：123456789 The loop is over!
+  
+continue:  
+continue语句用于跳出一次循环，例如：  
+```
+int i = 1;
+while (i <= 100) {
+    if (i % 5 == 0)
+        continue;
+    System.out.print(i);
+    i++;
+
+}
+```
+运行结果：1234
+于目标结果不符合
+
+```
+for(int i = 1; i <= 100; i++) {
+            if (i % 15 == 0) {
+                System.out.print("\n");  //当 i = 15，换行，然后执行 continue
+                continue;
+            }
+            System.out.printf("%2d ",i);  //用 printf 格式化字符
+        }
+    }
+```
+运行结果：  
+ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 
+16 17 18 19 20 21 22 23 24 25 26 27 28 29 
+31 32 33 34 35 36 37 38 39 40 41 42 43 44 
+46 47 48 49 50 51 52 53 54 55 56 57 58 59 
+61 62 63 64 65 66 67 68 69 70 71 72 73 74 
+76 77 78 79 80 81 82 83 84 85 86 87 88 89 
+91 92 93 94 95 96 97 98 99 100 
