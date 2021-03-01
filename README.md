@@ -134,4 +134,4 @@ for(int i = 1; i <= 100; i++) {
     }
 ```
 运行结果：  
-<img src="C:\Users\suwei\Desktop\字符打印.JPG" />
+![Alt text](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3490108693,2661506745&fm=26&gp=0.jpg)
