@@ -19,7 +19,7 @@
 4.4.5将十六进制转换为十进制数  
 说明：提示用户输入一个十六进制数字，显示它对应的十进制数  
 程序清单4-4 HexDigitDec.java
-```
+```java
 import java.util.Scanner;  //导入Scanner的包
 
 public class HexDigit2Dec {
@@ -134,4 +134,4 @@ for(int i = 1; i <= 100; i++) {
     }
 ```
 运行结果：  
-![Alt text](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3490108693,2661506745&fm=26&gp=0.jpg)
+
