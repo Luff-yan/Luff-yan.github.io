@@ -4,7 +4,8 @@
   
 **目录**   
 [2021.02.21](#jump_1)   
-[2021.02.28](#jump_2)   
+[2021.02.28](#jump_2) 
+[2021.03.07](#jump_3)    
 <span id="jump_1">
 <font color=yellow>
 2021.02.21 
@@ -66,7 +67,7 @@ break,continue
   
 while和do-while用于不知道次数的循环
 例如：
-```
+```java
 Scanner input = new Scanner(System.in);
 String user = inputnextLine();      //这里是用户输入的内容
 while (user == 'quit') {      //与用户输入的内容判断是否相同，是则退出
@@ -79,7 +80,7 @@ while (user == 'quit') {      //与用户输入的内容判断是否相同，是
 
 for用于有具体次数的循环  
 例如:  
-```
+```java
 for (int i = 1; i <= 100; i++) {   //知道具体的打印次数
     System.out.println("hello world!");
 }
@@ -88,7 +89,7 @@ for (int i = 1; i <= 100; i++) {   //知道具体的打印次数
 两种退出的语句：    
 #break  
 break语句用于跳出整个循环，例如：
-```
+```java
 int i = 1;
 while (i <= 100) {
     if (i == 10)        //当 i = 10时，执行 break 语句
@@ -110,7 +111,7 @@ System.out.println("The loop is over!");
   
 #continue
 continue语句用于跳出一次循环，例如：  
-```
+```java
 int i = 1;
 while (i <= 100) {
     if (i % 5 == 0)
@@ -123,7 +124,7 @@ while (i <= 100) {
 运行结果：1234
 于目标结果不符合
 
-```
+```java
 for(int i = 1; i <= 100; i++) {
             if (i % 15 == 0) {
                 System.out.print("\n");  //当 i = 15，换行，然后执行 continue
@@ -144,3 +145,85 @@ for(int i = 1; i <= 100; i++) {
 91 92 93 94 95 96 97 98 99 100 
 ```
 以上结果可以看到，没有 15 的倍数，当到达 15 时打印回车，并不是终结整个程序。
+
+
+<span id="jump_3">
+<font color=yellow>
+2021.03.07
+</font>
+
+这几天学习了第六章方法  
+方法的定义、传参、有无返回值。  
+程序设计和实现方法  
+  
+(1)无返回值  
+```java
+public static void Max() {
+    System.out.print("hello world");
+}  
+//无返回值得函数，调用就可以直接打印，也可以不用传参。
+
+```
+(2)有返回值
+```java
+public static int Max(int n) {  //必须要参数，而且有返回值。
+    if (n > 0) {
+        return n;
+    }
+    else 
+        return 0;
+}
+```
+
+(3)程序设计和实现方法  
+分层设计：自顶向下设计、自底向上设计  
+设计一个总体的方案然后完成细节。  
+
+示例学习 6.10
+```java
+public class TestRandomCharacter {
+    /**Main method*/
+    public static void main(String[] args) {
+        final int NUMBER_OF_CHARS = 100;
+        final int CHARS_PER_LINE = 25;
+        
+        //Print random character between 'a' and 'z', 25 chars per line
+        for (int i = 0; i < NUMBER_OF_CHARS; i++) {
+            char ch = RandomCharacter.getRandomLowerCaseLetter();
+            if ((i + 1) % CHARS_PER_LINE == 0)
+                System.out.println(ch);
+            else
+                System.out.print(ch);
+        }
+    }
+}
+
+class RandomCharacter {
+    /**Generate a random character between ch1 and ch2 */
+    public static char getRandomCharacter(char ch1, char ch2) {
+        return (char)(ch1 + Math.random() * (ch2 - ch1 + 1));
+    }
+    
+    /**Generate a random lowercase letter */
+    public static char getRandomLowerCaseLetter() {
+        return getRandomCharacter('a', 'z');
+    }
+    
+    /**Generate a random uppercase letter */
+    public static char getRandomUpperCaseLetter() {
+        return getRandomCharacter('A', 'Z');
+    }
+    
+    /**Generate a random digit character*/
+    public static char getRandomDigitCharacter() {
+        return getRandomCharacter('0', '9');
+    }
+    
+    /**Generate a random character*/
+    public static char getRandomCharacter() {
+        return getRandomCharacter('\u0000', '\uFFFF');
+    }
+}
+
+
+```
