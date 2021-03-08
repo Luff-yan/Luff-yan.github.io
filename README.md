@@ -192,7 +192,7 @@ public class TestRandomCharacter {
         
         //Print random character between 'a' and 'z', 25 chars per line
         for (int i = 0; i < NUMBER_OF_CHARS; i++) {
-            char ch = RandomCharacter.getRandomLowerCaseLetter();
+            char ch = RandomCharacter.getRandomLowerCaseLetter();//调用方法的格式：类型.方法名
             if ((i + 1) % CHARS_PER_LINE == 0)
                 System.out.println(ch);
             else
