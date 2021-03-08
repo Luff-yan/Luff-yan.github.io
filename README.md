@@ -4,7 +4,7 @@
   
 **目录**   
 [2021.02.21](#jump_1)   
-[2021.02.28](#jump_2) 
+[2021.02.28](#jump_2)   
 [2021.03.07](#jump_3)    
 <span id="jump_1">
 <font color=yellow>
@@ -153,7 +153,7 @@ for(int i = 1; i <= 100; i++) {
 </font>
 
 这几天学习了第六章方法  
-方法的定义、传参、有无返回值。  
+方法的定义、传参、有无返回值  
 程序设计和实现方法  
   
 (1)无返回值  
@@ -179,7 +179,7 @@ public static int Max(int n) {  //必须要参数，而且有返回值。
 分层设计：自顶向下设计、自底向上设计  
 设计一个总体的方案然后完成细节。  
 
-示例学习 6.10
+示例学习 6.10 生成随机字符
 ```java
 public class TestRandomCharacter {
     /**Main method*/
@@ -224,6 +224,12 @@ class RandomCharacter {
         return getRandomCharacter('\u0000', '\uFFFF');
     }
 }
+```
 
-
+运行结果
+```
+tzpzrdvahdzdbdtjtnpwddwss
+lkbtuqyqlsljtzlxthtdrzrlk
+oopwmqnnoawjpmldginrzhliy
+iauqexrtohnabofqekoaltkpz
 ```
