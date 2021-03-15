@@ -6,7 +6,7 @@
 [2021.02.21](#jump_1)   
 [2021.02.28](#jump_2)   
 [2021.03.07](#jump_3)    
-  
+[2021.03.15](#jump_4)  
   
 
 <span id="jump_1">
@@ -235,4 +235,70 @@ tzpzrdvahdzdbdtjtnpwddwss
 lkbtuqyqlsljtzlxthtdrzrlk
 oopwmqnnoawjpmldginrzhliy
 iauqexrtohnabofqekoaltkpz
+```
+  
+
+
+<span id="jump_4">
+<font color=yellow>
+2021.03.15 
+</font>  
+第七章：一维数组  
+7.2.6 处理数组  
+5）找出最大元素 Example.java
+```java
+public class Random {
+    public static void main(String[] args) {
+        java.util.Scanner input = new java.util.Scanner(System.in);
+        double [] myList = new double[5];       
+        
+        //Create Scanner
+        System.out.println("Enter five numbers: ");     
+        for (int i = 0; i < 5; i++) {
+            myList[i] = input.nextDouble();
+        }
+        
+        //Compare numbers
+        double max = myList[0];
+//      double index = 0;
+        for (int i = 1; i < 5; i++) {
+            if (max < myList[i]) {
+                max = myList[i];
+//              index = i;
+            }
+        }
+        
+        //Display result
+        System.out.println("The max number is " + max);        
+    }
+}
+```
+
+6)找出最大元素的下标  
+```java
+public class Random {
+    public static void main(String[] args) {
+        java.util.Scanner input = new java.util.Scanner(System.in);
+        double [] myList = new double[5];
+        
+        //Create Scanner
+        System.out.println("Enter five numbers: ");     
+        for (int i = 0; i < 5; i++) {
+            myList[i] = input.nextDouble();
+        }
+        
+        //Compare numbers
+        double max = myList[0];
+        double index = 0;
+        for (int i = 1; i < 5; i++) {
+            if (max < myList[i]) {
+                max = myList[i];
+                index = i;
+            }
+        }
+        
+        //Display result
+        System.out.println("The max index of number is " + (index + 1));        
+    }
+}
 ```
