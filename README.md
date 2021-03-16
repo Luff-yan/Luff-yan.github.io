@@ -302,3 +302,54 @@ public class Random {
     }
 }
 ```
+  
+7)数组随机生成数字：  
+```java
+for (int i = myList.length - 1; i > 0; i++) {
+    //Generate an index of j randomly with 0 <= j <= i
+    int i = (int)(Math.random() * (i * 1));
+
+    //Swap myList[i] with myList[j]
+    double temp = myList[i];
+    myList[i] = myList[j];
+    myList[j] = temp;
+}
+```
+7.4示例学习：一副牌
+程序清单 7-2 DeckOfCards.java
+```java
+public class DeckOfCards {
+    public static void main(String[] args) {
+        int[] deck = new int[52];
+        String[] suits = {"Spades", "Hearts", "Diamonds", "Clubs"};
+        String[] ranks = {"Ace", "2", "3", "4", "5", 
+                            "6", "7", "8", "9", "10", 
+                            "Jack", "Queen", "King"};
+
+        //Initialize the cards
+        for (int i = 0; i < deck.length; i++) 
+            deck[i] = i;
+
+        //Shuffle the cards
+        for (int i = 0; i < deck.length; i++){
+            //Generate an index randomly
+            int index = (int)(Math.random() * deck.length);
+            int temp = deck[i];
+            deck[i] = deck[index];
+            deck[index] = temp;
+        }
+
+        //Display the first four cards
+        for (int i = 0; i < 4; i++) {
+            String suit = suits[deck[i] / 13];
+            String rank = ranks[deck[i] % 13];
+            System.out.println("Card number " + deck[i] + ": "
+                            + rank + " of " + suit);
+        }
+    }
+}
+```
+
+  
+
+  
