@@ -315,7 +315,7 @@ for (int i = myList.length - 1; i > 0; i++) {
     myList[j] = temp;
 }
 ```
-7.4示例学习：一副牌
+7.4示例学习：一副牌  
 程序清单 7-2 DeckOfCards.java
 ```java
 public class DeckOfCards {
