@@ -349,6 +349,15 @@ public class DeckOfCards {
     }
 }
 ```
+结果：  
+```
+Card number 43: 5 of Clubs
+Card number 44: 6 of Clubs
+Card number 37: Queen of Diamonds
+Card number 32: 7 of Diamonds
+
+```
+
 
   
 
