@@ -381,4 +381,44 @@ int[][] matrix = {
 };  
 
 二维数组是使用两个下标，一个表示 行，一个表示 列。  
-同一维数组一样，每个下标索引值都是 int 型。
+同一维数组一样，每个下标索引值都是 int 型。  
+  
+8.4将二维数组传递给方法  
+程序清单8-1 PassTwoDimesionalArray
+```java
+import java.util.Scanner;
+
+public class PassTwoDimesionalArray {
+    public static void main(String[] args) {
+        int[][] m = getArray(); //Get an array
+
+        //Display sum of elements
+        System.out.println("\nSum of all elements is " + sum(m));
+    }
+
+    public static int[][] getArray() {
+        //Create a Scanner
+        Scanner input = new Scanner(System.in);
+
+        //Enter array values
+        int[][] m = new int[3][4];
+        System.out.println("Enter " + m.length + " rows and "
+                    + m[0].length + " columns: ");
+        for (int i = 0; i < m.length; i++)
+            for (int j = 0; j < m[i].length; j++)
+                m[i][j] = input.nextInt();
+        return m;
+    }
+
+    public static int sum(int[][] m) {
+        int total = 0;
+        for (int row = 0; row < m.length; row++)
+            for (int column = 0; column < m[row].length; column++)
+                total += m[row][column];
+
+        return total;
+    }
+}
+```
+  
+要点提示：将一个二维数组转递给方法的时候，数组的引用传递给了方法  
