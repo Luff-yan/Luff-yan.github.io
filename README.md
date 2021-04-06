@@ -422,3 +422,117 @@ public class PassTwoDimesionalArray {
 ```
   
 要点提示：将一个二维数组转递给方法的时候，数组的引用传递给了方法  
+  
+  
+<span id="jump_6">
+<font color=yellow>
+2021.04.04 
+</font>  
+第九章：对象和类  
+学习了第九章的前5个小节  
+从这一章开始正式进入面向对象编程   
+OOP:(Object Oriented Programming)面向对象编程  
+OOD:(Object Oriented Design)面向对象设计  
+OOA:(Object Oriented Analysis)面向对象分析方法  
+
+我们这里引入OOP概念：  
+引言：面向对象编程可以有效的帮助开发大规模的软件以及图形用户界面 
+面向对象就是增加了可维护性，但是运行效率还是不如面向过程  
+  
+9.3示例：定义类和创建对象  
+程序构造了三个圆对象，其半径分别为1，25和125，然后显示这三个圆的半径和面积  
+然后将第二个对象的半径改为100，并显示它的新半径和面积  
+程序清单9-1 TestSimpleCircle.java
+```java
+public class TestSimpleCricle {
+    public static void main(String[] args) {
+        
+        //Create circle with radius 1
+        SimpleCircle circle1 = new SimpleCircle();
+        System.out.println(circle1.radius + " is " + circle1.getArea());
+        
+        //Create circle with radius 25
+        SimpleCircle circle2 = new SimpleCircle(25);
+        System.out.println(circle2.radius + " is " + circle2.getArea());
+        
+        //Create circle with radius 125
+        SimpleCircle circle3 = new SimpleCircle(125);
+        System.out.println(circle3.radius + " is " + circle3.getArea());
+        
+        //Modify circle radius
+        circle2.radius = 100;   //or circle2.setRadius(100)
+        System.out.println(circle2.radius + " is " + circle2.getArea());
+    }
+}
+
+
+//Define the circle class with two constructors
+class SimpleCircle {
+    double radius;
+    
+    /** construct a circle with radius1 */
+    SimpleCircle() {
+        radius = 1;
+    }
+    
+    /** Return the area of this circle */
+    double getArea() {
+        return radius * radius * Math.PI;
+    }
+    
+    /** Construct a circle with a specified radius */
+    SimpleCircle(double newRadius) {
+        radius = newRadius;
+    }
+    
+    /**Return the perimeter of this circle */
+    double getPerimeter() {
+        return 2 * radius * Math.PI;
+    }
+    
+    /** Set a new radius for this circle */
+    void setRadius(double newRadius) {
+        radius = newRadius;
+    }
+}
+```
+  
+程序包括两个类，第一个类TestSimpleCircle是主类，它的目的是为了测试第二个类  
+是这样类的程序称为该类的客户(client)。  
+  
+9.5通过引用对象访问对象  
+要点提示：对象的数据和方法可以运用点操作符(.)通过对象的引用变量进行访问  
+新创建的对象在内存中被分配空间。它们可以通过引用来访问。  
+  
+9.5.2访问对象的数据和方法  
+objectRefVar.dataField引用对象的数据域  
+objectRefVar.method(arguments)调用对象的方法  
+  
+9.5.3 引用数据域和 null 值  
+数据域有可能是引用型的。如果一个引用类型的数据域没有引用任何对象，那么这个数据域就有一个 特殊的Java值 null。null同true 和 false 一样都是一个直接量。true 和 false 是 boolean  类型直接量，而 null 是引用类型直接量。  
+引用类型数据域的默认值是 null， 数值类型数据域默认值是 0， boolean类型数据域的默认值是 false, 而 char 类型数据域的默认值是 '\u0000'。但是Java 没有给方法中的局部变量赋默认值。  
+```java
+class Student {
+    String name;    //name has the default value null
+    int age;        //age has the default value0
+    boolean isScienceMajor;     //isScienceMajor has default value false
+    char gender;            //gender has default value '\u0000'
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Student student = new Student();
+        System.out.println("name? " + student.name);
+        System.out.println("age? " + student.name);
+        System.out.println("isScienceMajor? " + student.isScienceMajor);
+        System.out.println("gender? " + student.gender);
+    }
+}
+```
+输出：
+```
+name? null
+age? null
+isScienceMajor? false
+gender? 
+```
