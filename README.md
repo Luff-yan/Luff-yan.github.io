@@ -567,3 +567,30 @@ private修饰符限定方法和数据域只能在它自己的类中被访问。
 将数据域设为私有保护数据，并且使类易于维护。  
 为了避免对数据域的直接修改，应该使用private修饰符将数据域声明为私有的，这称为数据域封装。  
 为了能够访问私有数据域，可以提供一个 get 方法返回数据域的值。为了能够更新一个数据域，可以提供一个 set 方法给数据域设置新值。get 方法也称为 访问器(accessor), 而 set 方法称为 修改器 (mutator)。  
+    
+
+
+
+
+第十一章：继承和多态  
+关键字 super 用法两种：  
+1）调用父类的构造方法  
+2）调用父类的方法  
+
+语法:  
+super()  : 是调用父类的构造方法  
+ 或者 super(parameters);   ：调用与参数匹配的父类的构造方法。  
+
+注意：语句 super() 和 super(arguments)必须出现在子类构造法方法的第一行，  
+这是显示调用父类构造方法的唯一方式。  
+例：公用构造方法  
+public className (  
+    double radius, String color, boolean filled) {  
+    super(color, filled);  
+    this.radius = radius;  
+    }  
+
+  
+构造方法链：构造一个实例时，将会调用沿着继承链的所有父类的构造方法。
+
+![Dam](C:\Windows\Web\Wallpaper\Theme1\src=http---www.dngswin10.com-uploads-allimg-522019-115K24401-0.jpg&refer=http---www.dngswin10.jpg)
