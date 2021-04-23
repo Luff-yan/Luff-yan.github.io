@@ -591,6 +591,4 @@ public className (
     }  
 
   
-构造方法链：构造一个实例时，将会调用沿着继承链的所有父类的构造方法。
-
-![Dam](C:\Windows\Web\Wallpaper\Theme1\src=http---www.dngswin10.com-uploads-allimg-522019-115K24401-0.jpg&refer=http---www.dngswin10.jpg)
+构造方法链：构造一个实例时，将会调用沿着继承链的所有父类的构造方法。  
