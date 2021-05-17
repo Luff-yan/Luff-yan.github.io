@@ -592,3 +592,11 @@ public className (
 
   
 构造方法链：构造一个实例时，将会调用沿着继承链的所有父类的构造方法。  
+
+```java
+    public class Text{
+        public static void main(String[] args) {
+            System.out.println("helloworld");
+    }
+}
+```
