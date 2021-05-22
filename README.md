@@ -137,7 +137,7 @@ for(int i = 1; i <= 100; i++) {
             }
             System.out.printf("%2d ",i);  //用 printf 格式化字符
         }
-    }
+    
 ```
 运行结果：  
 ```
