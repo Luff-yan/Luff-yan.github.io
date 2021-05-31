@@ -48,4 +48,10 @@ b.删除本库中的文件 git rm xxx
 c.提交说明 git commit -m "删除文件"
 d.提交 git push origin main
 
-注：使用 rm 命令删除文件一定要慎重。
+注：使用 rm 命令删除文件一定要慎重。  
+  
+出现错误：
+![rejected] main -> main (non-fast-forward)
+error:failed to push some refs to xxxxxx
+可以使用强制覆盖：
+git push -f origin main
