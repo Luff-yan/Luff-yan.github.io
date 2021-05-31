@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hbzhit.modules.test.dao.YanDao">
+
+<!-- 根据key，更新value -->
+	<insert id="add" parameterType="java.util.HashMap">
+		insert into yan(id, username, password, num) values(#{id}, #{username}, #{password}, #{num})
+	</insert>
+    <select id="show" resultType="com.hbzhit.modules.test.entity.YanEntity">
+        select * from yan 
+    </select>
+    
+    <update id="up" parameterType="java.util.HashMap">
+    	update yan set
+	       <if test="username != null and username !=''">
+	               username=#{username},
+	      </if>
+	      <if test="password != null and password !=''">
+	             password=#{password},
+	      </if>
+	      <if test="num != null and num !=''">
+	            num=#{num}
+	      </if>
+     	 where id=#{id}
+    </update>
+    
+    <delete id="del" parameterType="java.util.HashMap">
+    	delete from yan where id=#{id}
+    </delete>
+</mapper>
