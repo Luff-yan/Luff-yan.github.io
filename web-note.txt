@@ -22,7 +22,7 @@ a. github网站上新建库，复制代码
 b. git进入根目录f:/
 c. git clone 复制的代码
 d. 进入拷贝下来的库的那个文件夹（那个隐藏文件.git在哪，就在那执行下面e、f、g三步）
-e. git add .
+e. git add . or git add -A:添加所有文件
 f. git commit -m “描述”
 g. git push origin main
 注：g 中的分支 master 改成 main,(master有种族歧视）
