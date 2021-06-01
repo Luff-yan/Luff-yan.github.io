@@ -60,3 +60,7 @@ git拉取项目强制覆盖本地命令：
 git fetch --all
 git reset --hard origin/main
 git pull
+
+git网速太慢：
+可以使用 github.global.ssl.fastly.net 的ip
+
