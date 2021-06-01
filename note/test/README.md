@@ -66,6 +66,9 @@ mapper.xml :(写sql语句查询数据库)
 Dao层中的类连接到 entity 层的类
 Service 中的类连接到 Entity层 
 
+idea运行web项目：npm run serve
+若显示：npm command is not found
+则输入：npm install
 
 
 
