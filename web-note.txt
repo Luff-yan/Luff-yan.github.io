@@ -56,7 +56,7 @@ error:failed to push some refs to xxxxxx
 可以使用强制覆盖：
 git push -f origin main
 
-git强制覆盖本地命令：
+git拉取项目强制覆盖本地命令：
 git fetch --all
 git reset --hard origin/main
 git pull
