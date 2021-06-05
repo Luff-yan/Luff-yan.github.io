@@ -64,3 +64,17 @@ git pull
 git网速太慢：
 可以使用 github.global.ssl.fastly.net 的ip
 
+git 新建分支：
+1) 切换到基础分支，如主干
+git checkout main
+
+2）创建并切换到新分支
+git checkout -b devlop
+git branch可以看到已经在devlop分支上
+
+3)更新分支代码并提交
+git add *
+git commit -m "init devlop"
+git push origin devlop
+
+4)在git代码管理界面经可以看到devlop分支了。
