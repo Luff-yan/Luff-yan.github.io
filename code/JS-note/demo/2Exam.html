@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="content-type"content="text/html" charset="UTF-8">
+  <title>两个值的交换</title>
+  <script>
+   function jh()//点击交换按钮运行此处代码
+   {
+    var a=document.getElementById('zhi1').value;
+    document.getElementById('zhi1').value=document.getElementById('zhi2').value;
+    document.getElementById('zhi2').value=a;
+   }
+
+  </script>
+ </head>
+ <body>
+ <input type="text" name="" id="zhi1">
+ <input type="button" value="交换" onclick="jh()">## 交换
+ <input type="text" name="" id="zhi2">
+ </body>
+</html>

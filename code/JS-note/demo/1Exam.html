@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+</head>
+<body>
+
+<ul id="myout"><span id="sp">测试一</span></ul>
+<button onclick="addDom()">向p元素追加元素</button>
+
+<script>
+    function addDom(){
+        var span = document.createElement('sp');
+        span.innerHTML = '<li>测试二</li>';
+        document.getElementById('myout').appendChild(span);
+    }
+</script>
+
+</body>
+</html>

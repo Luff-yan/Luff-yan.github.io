@@ -1,0 +1,30 @@
+#define js variables
+var x;
+
+JavaScript Composition：
+ECMAScript：JavaScript grammer
+DOM：页面文档对象模型 (Document Object Model)
+BOM:浏览器对象模型(Browser Object Model)
+
+JS has three write postion:
+inline; in <body>
+embedded;	in <head>
+external;	
+
+
+JS has three shows:
+alert('');
+
+console.log('');
+warn
+error;
+
+windows.confir('');
+
+Declare variable has three:
+1.Declare only, not assign
+show undefined
+2.not declare and not assign
+show error
+3.not declare and only assign
+show variable

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>11DOM</title>
+</head>
+<body>
+<!-- Dom简介 
+dom树结构
+页面里面所有标签叫 元素 element
+网页中的所有内容都是节点，用 node表示
+
+-->
+	<li id="Beijin">Beijin</li>
+	<h1>spidermen</h1>
+	<div id="nanjin">Nanjin</div>
+	<ul>
+		<li>I'm spidermen</li>
+		<li>I'm spidermen</li>
+		<li>I'm spidermen</li>
+		<li>I'm spidermen</li>
+		<li>I'm spidermen</li>
+
+	</ul>
+
+	<script>
+		// var element = document.getElementById('nanjin');
+		// console.log(element);
+		// console.dir(element);	//打印我们返回的元素对象，更好的查看里面的属性和方法
+		// console.log(typeof element);
+		var ment = document.getElementsByTagName('li');
+		// console.log(ment[0]);
+		for (var i = 0; i < ment.length; i++) {
+			console.log(ment[i]);
+		}
+	</script>
+</body>
+</html>
+
+<!-- 
+JS是往前看，前面没有是找不到的 
+2.因为文档页面是从上往下加载，所以先得有标签，所以script要写到下面
+3.参数id是大小写敏感的字符串
+4.返回的是一个元素对象
+-->
+<!-- 
+根据id获取元素
+getElementById('id');
+id 为字符串
+
+根据标签名获取
+getElementsByTagName('name')
+返回带有指定标签名的对象的集合
+以伪数组的形式存储
+
+想要依次打印里面的元素对象可以采用遍历的方式
+for (var i = 0;i < ment.length; i++) {
+	console.log(ment[i]);
+}
+ -->
+
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <!-- <script>
+    $(document).ready(function(){
+      // $("#submit").click(function(){
+      // 	alert($("#value").val());
+      // 	$("#value").val($("#value").val())
+      // }); 
+    });
+  </script> -->
+</head>
+<body>
+
+<h2>你最喜欢那个城市</h2>
+<ul id="one">
+  <li id="bei">北京</li>
+  <li id="shang">上海</li>
+  <li id="dong">东京</li>
+  <li id="shou">首尔</li>
+  <!-- <li id="on"></li> -->
+</ul>
+<br>
+<br>
+
+<h2>你最喜欢那个单机游戏</h2>
+<ul id="two">
+  <li id="hong"><span id="hide" hidden>^^^</span>红警</li>
+  <li id="shi">实况</li>
+  <li id="ji">极品飞车</li>
+  <li id="mo">魔兽</li>
+</ul>
+<br>
+<br>
+<br>
+
+
+<form action="" method="get">
+  <input type="radio" name="radio" value="game"/> game
+  <input type="radio" name="radio" value="city" /> city
+  <input id="val" type="text" name="data" value="">
+  <input id="submit" type="button" value="Submit" onclick="addDom()" />
+</form>
+
+
+<script>
+
+    function addDom(){
+      var flag = $("input[name='radio']:checked").val();
+      if(flag=="game"){
+        var span = document.createElement('on');
+        span.innerHTML = "<li>" + document.getElementById("val").value+"</li>";
+        document.getElementById('two').appendChild(span);
+      }
+
+      else{
+        var span = document.createElement('on');
+        span.innerHTML = "<li>" + document.getElementById("val").value+"</li>";
+        document.getElementById('one').appendChild(span);
+      } 
+    }
+
+   
+</script>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</body>
+</html>
