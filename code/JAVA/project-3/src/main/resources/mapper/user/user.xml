@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.modules.user.dao.UserDao">
+    <select id="list" resultType="com.cn.modules.user.entity.UserEntity">
+        select * from user;
+    </select>
+    <delete id="del" parameterType="com.cn.modules.user.entity.UserEntity">
+        delete from user where id = #{id};
+    </delete>
+    <insert id="add" parameterType="com.cn.modules.user.entity.UserEntity">
+        insert into user(
+                       id, name, password,
+                       tel, mail,
+                       createtime,updatetime,
+                       state
+                       )
+                       values(
+                       #{id}, #{name}, #{password},
+                       #{tel}, #{mail},
+                       #{createtime},#{updatetime},
+                       #{state}
+                       );
+    </insert>
+    <update id="update" parameterType="com.cn.modules.user.entity.UserEntity">
+        update user set id=#{id}, name=#{name},
+                        tel=#{tel}, mail=#{mail},
+                        createtime=#{createtime},
+                        updatetime=#{updatetime},
+                        state=#{state}
+                        where id=#{id};
+    </update>
+</mapper>
