@@ -33,6 +33,7 @@ git下拉文件：
 a. git fetch 获取remote中最新的修改
 b. git pull 将remote中的文件拉取到本地
 
+
 或者直接克隆：
 从远程库中克隆repo：
     github拉取
@@ -42,27 +43,33 @@ b. git pull 将remote中的文件拉取到本地
 
 注：上传文件和下拉文件一定要在家目录下
 
+
 git 删除文件：
 a.删除本地文件 rm xxx
 b.删除本库中的文件 git rm xxx
 c.提交说明 git commit -m "删除文件"
 d.提交 git push origin main
 
+
 注：使用 rm 命令删除文件一定要慎重。  
   
+
 出现错误：
 ![rejected] main -> main (non-fast-forward)
 error:failed to push some refs to xxxxxx
 可以使用强制覆盖：
 git push -f origin main
 
+
 git拉取项目强制覆盖本地命令：
 git fetch --all
 git reset --hard origin/main
 git pull
 
+
 git网速太慢：
 可以使用 github.global.ssl.fastly.net 的ip
+
 
 git 新建分支：
 1) 切换到基础分支，如主干
@@ -78,3 +85,35 @@ git commit -m "init devlop"
 git push origin devlop
 
 4)在git代码管理界面经可以看到devlop分支了。
+
+
+git合并分支：
+1)切换到主分支
+git checkout main
+
+2)下拉主分支项目
+git pull origin main
+如果是多人开发，需要把远程主分支上的项目拉下来
+
+3)合并分支
+git merge devel
+
+4)查看状态及执行提交命令
+git status
+
+5)提交到主分支
+git push origin main
+
+6)更新远程分支列表
+git remote update origin --prune
+
+7)查看所有分支
+git branch -a
+
+8)删除远程分支
+git push origin --delete devel
+
+9)删除本地分支devel
+git branch -d devel
+
+参考资料：https://www.jianshu.com/p/26d050497abb
