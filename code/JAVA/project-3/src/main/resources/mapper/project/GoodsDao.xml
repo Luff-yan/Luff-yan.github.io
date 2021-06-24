@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.modules.project.dao.GoodsDao">
+    <select id="list" resultType="com.cn.modules.project.entity.response.ResGoodsEntity">
+        select * from app_goods where project_id = #{projectId} and type = 1
+        <if test="goods != null and goods !='' ">
+            and goods like concat('%',#{goods},'%')
+        </if>
+        <if test="maxPrice != null and minPrice !='' ">
+            and price <![CDATA[<=]]> #{maxPrice}
+        </if>
+        <if test="minPrice != null and minPrice !='' ">
+            and price <![CDATA[>=]]> #{minPrice}
+        </if>
+        order by coalesce(update_time,create_time) desc
+    </select>
+</mapper>
