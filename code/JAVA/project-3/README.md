@@ -5,7 +5,8 @@
 已经完成热部署。
 知识点:
 一、两种请求方式：
-	$.ajax({
+```js
+	    $.ajax({
       		type : "POST",
       		url : "project/page",
       		dataType : "json",
@@ -15,24 +16,29 @@
       		},
       		success : function(data) {
 		/*不可照抄
-		//关闭当前frame
-                               xadmin.close();
-                               // 可以对父窗口进行刷新
-                               xadmin.father_reload();
+		                 //关闭当前frame
+                         xadmin.close();
+                         // 可以对父窗口进行刷新
+                         xadmin.father_reload();
 		*/
                              }
                     });              
-
+```
 第二种方式
- $.post('project/delete',{id:id}, function(res) {       
-},'json');  
+```js
+ $.post('project/delete',
+ 	     {id:id}, function(res) { 
 
+           },'json');  
+```
 二、onclick的用法：
 onclick="xadmin.open('用户修改','跳转页面的名称',500,300)"
 xadmin.open：跳转页面
 
 注：跳转页面需要在 IteractionController 添加：
+```java
 @RequestMapping("跳转页面名称")
 	  public String 同上() {
 		  return "同上";
 	  }
+```
