@@ -1,0 +1,48 @@
+spring:
+    #数据源
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        druid:
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            url: jdbc:mysql://localhost:3306/demo?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&serverTimezone=Hongkong
+            username: root
+            password: 123456
+            initial-size: 10
+            max-active: 100
+            min-idle: 10
+            max-wait: 60000
+            pool-prepared-statements: true
+            max-pool-prepared-statement-per-connection-size: 20
+            time-between-eviction-runs-millis: 60000
+            min-evictable-idle-time-millis: 300000
+            test-while-idle: true
+            test-on-borrow: false
+            test-on-return: false
+            stat-view-servlet:
+                enabled: true
+                url-pattern: /druid/*
+                #login-username: admin
+                #login-password: admin
+            filter:
+                stat:
+                    log-slow-sql: true
+                    slow-sql-millis: 1000
+                    merge-sql: false
+                wall:
+                    config:
+                        multi-statement-allow: true
+    rabbitmq:
+      host: 192.168.5.10
+      port: 5672
+      username: Admin
+      password: Admin
+      publisher-confirms: true # 消息发送到交换机确认机制，是否确认回调
+      publisher-returns: true # 消息发送到交换机确认机制，是否返回回调
+      listener:
+        simple:
+          acknowledge-mode: manual #采用手动应答
+          concurrency: 1 #指定最小的消费者数量
+          max-concurrency: 1 #指定最大的消费者数量
+          retry:
+            enabled: true #是否支持重试
+                          

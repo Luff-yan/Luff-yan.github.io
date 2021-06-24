@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.modules.project.dao.ProjectDao">
+    <select id="list" resultType="com.cn.modules.project.entity.ProjectEntity">
+        select * from app_type where 1=1 order by coalesce(update_time,create_time) desc
+    </select>
+     <select id="listInfo" resultType="com.cn.modules.project.entity.ProjectEntity">
+        select * from app_type where state=1;
+    </select>
+</mapper>
