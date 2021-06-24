@@ -1,0 +1,202 @@
+<html lang="zh-CN" style=""
+    class=" modernizr_canvas modernizr_canvastext modernizr_cssremunit modernizr_rgba modernizr_opacity modernizr_lastchild modernizr_nthchild modernizr_bgpositionxy modernizr_borderradius modernizr_csstransforms">
+
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <title>襄阳市</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/index/common.css">
+    <!-- IE8 HTML5 和  Respond.js 补丁。使 IE8 支持 HTML5 元素和媒体查询 -->
+    <!-- 警告: respond.min.js 不能通过 file:// 形式访问并看到效果。 -->
+    <!--[if lt IE 9]>
+<script src="/common/3rdLibs/bootstrap/js/html5shiv.min.js"></script>
+<script src="/common/3rdLibs/bootstrap/js/respond.min.js"></script>
+<![endif]-->
+    <script src="../../js/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="../../js/jquery/bootstarp.js" type="text/javascript"></script>
+    <script src="../../js/index/wdatepicker.js" type="text/javascript"></script>
+    <script src="../../js/index/moderlizi.js" type="text/javascript"></script>
+    <script src="../../js/index/common.js" type="text/javascript"></script>
+    <script src="../../js/index/page.js" type="text/javascript"></script>
+    <script src="../../js/index/layout.js" type="text/javascript"></script>
+    <script src="../../js/index/layer.js" type="text/javascript"></script>
+    <link href="../../css/index/wdatepicker.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../css/rewuchaxun/layer.css" id="layuicss-layer">
+
+
+    <script type="text/javascript">
+        // 向js暴露网络根路径。
+        var _system_static_rootPath = "";
+
+        var _biaodanMoBanSaveLocation = "biaodan_moban";
+    </script>
+    <link rel="icon" type="image/x-icon" href="/common/resources/icon/favicon.ico">
+    <script src="ZhaoPianGuanli.js" type="text/javascript"></script>
+    <style>
+        tbody tr td a {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>照片档案</h2>
+    </div>
+    <form id="main" class="container">
+        <h4 class="formTitle">查询条件</h4>
+        <table class="condition table table-condensed">
+            <tbody>
+                <tr>
+                    <td><label for="renylb">人员类别</label></td>
+                    <td>
+                        <select class="form-control" name="renylb">
+                            <option value="zxry" selected="selected">在享人员</option>
+                            <option value="xzry">新增人员</option>
+                        </select>
+                    </td>
+                    <td><label for="HUZXM">户主姓名</label></td>
+                    <td><input type="text" class="form-control" name="HUZXM" id="HUZXM"></td>
+                    <td><label for="HUZSFZH">户主身份证号</label></td>
+                    <td><input type="text" class="form-control" name="HUZSFZH" id="HUZSFZH"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="xianjCondition">市</label></td>
+                    <td>
+                        <select class="form-control" name="xianjCondition" id="xianjCondition">
+                            <option value="150421">襄阳市</option>
+                        </select>
+                    </td>
+                    <td><label for="zhenjCondition">街道/镇</label></td>
+                    <td>
+                        <select class="form-control" name="zhenjCondition" id="zhenjCondition">
+                            <option value="" selected="selected">请选择</option>
+                            <option value="150421001">xxx办事处</option>
+                            <option value="150421100">xxx办事处</option>
+                            <option value="150421101">xxx镇</option>
+                            <option value="150421102">xxx镇</option>
+                            <option value="150421103">xxx镇</option>
+                            <option value="150421104">xxx镇</option>
+                            <option value="150421105">xxx镇</option>
+                            <option value="150421106">xxx镇</option>
+                            <option value="150421200">xxx镇</option>
+                            <option value="150421201">xxx镇</option>
+                            <option value="150421202">xxx镇</option>
+                            <option value="150421203">xxx镇</option>
+                            <option value="150421204">xxx镇</option>
+                            <option value="150421205">xxx镇</option>
+                            <option value="150421206">xxx镇</option>
+                            <option value="150421208">xxx镇</option>
+                        </select>
+                    </td>
+                    <td><label for="cunjCondition">社区/村</label></td>
+                    <td>
+                        <select class="form-control" name="cunjCondition" id="cunjCondition">
+                        </select>
+                    </td>
+                </tr>
+                <script type="text/javascript">
+                    var _____root_path______ = '';
+                    function queryQuhuadiming() {
+                        var xianjCondition = $("#xianjCondition").val();
+                        var zhenjCondition = $("#zhenjCondition").val();
+                        var cunjCondition = $("#cunjCondition").val();
+                        $.post(_____root_path______ + "/common/php/diquliandong_ChaXun.php", { xianjCondition: xianjCondition, zhenjCondition: zhenjCondition, cunjCondition: cunjCondition }, function (data) {
+                            var is_ok = data['is_ok'];
+                            if (is_ok) {
+                                // 区划下拉列表
+                                var type = data['type'];
+                                if (type) {
+                                    var list = data['quhuas'];
+                                    var options = '<option value="" selected="selected">请选择</option>';
+                                    $(list).each(function (index, model) {
+                                        options = options + '<option value="' + model['id'] + '">' + model['mingc'] + '</option>';
+                                    });
+                                    $("#" + type + "Condition").html(options);
+                                }
+                            } else {
+                                var msg = data['msg'];
+                                showmessage(msg, 1);
+                            }
+                        }, "json");
+                    };
+                    $("#xianjCondition").change(function () {
+                        $("#zhenjCondition").html('<option value="" selected="selected">请选择</option>');
+                        $("#cunjCondition").html('<option value="" selected="selected">请选择</option>');
+                        $("#zujCondition").html('<option value="" selected="selected">请选择</option>');
+                        queryQuhuadiming();
+                    });
+                    $("#zhenjCondition").change(function () {
+                        $("#cunjCondition").html('<option value="" selected="selected">请选择</option>');
+                        $("#zujCondition").html('<option value="" selected="selected">请选择</option>');
+                        queryQuhuadiming();
+                    });
+                    $("#cunjCondition").change(function () {
+                        $("#zujCondition").html('<option value="" selected="selected">请选择</option>');
+                        queryQuhuadiming();
+                    });
+                    queryQuhuadiming();
+                </script>
+                <tr>
+                    <td><label for="KAISSJ">开始日期</label></td>
+                    <td class="multiInputs">
+                        <input class="form-control date" name="KAISSJ" id="KAISSJ" type="text">
+                    </td>
+                    <td><label for="JIESSJ">结束日期</label></td>
+                    <td class="multiInputs">
+                        <input class="form-control date" name="JIESSJ" id="JIESSJ" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7" style="text-align: right">
+                        <button class="btn btn-primary" type="button" id="chax_c">查询</button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+        <h4 class="formTitle">查询结果</h4>
+        <table class="result table table-condensed table-bordered table-hover" id="chaxjg">
+            <thead>
+                <tr>
+                    <th>户主姓名</th>
+                    <th>户主身份证号</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>韩秀梅</td>
+                    <td>150421198204192423</td>
+                    <td><a class="fl" style="display:inline;" title="门户牌" data_id="150421198204192423"
+                            lb="门户牌">门户牌</a>&nbsp;&nbsp;<a class="fl" style="display:inline;" title="家庭基本情况"
+                            data_id="150421198204192423" lb="家庭基本情况">家庭基本情况</a>&nbsp;&nbsp;<a class="fl"
+                            style="display:inline;" title="家庭财产情况" data_id="150421198204192423"
+                            lb="家庭财产情况">家庭财产情况</a>&nbsp;&nbsp;<a class="fl" style="display:inline;" title="手持身份证照片"
+                            data_id="150421198204192423" lb="手持身份证照片">手持身份证照片</a>&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>杨永</td>
+                    <td>150421195301282419</td>
+                    <td><a class="fl" style="display:inline;" title="门户牌" data_id="150421195301282419"
+                            lb="门户牌">门户牌</a>&nbsp;&nbsp;<a class="fl" style="display:inline;" title="家庭基本情况"
+                            data_id="150421195301282419" lb="家庭基本情况">家庭基本情况</a>&nbsp;&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="pages">
+        </div>
+    </form>
+
+    <div class="layui-layer-move"></div>
+</body>
+
+</html>

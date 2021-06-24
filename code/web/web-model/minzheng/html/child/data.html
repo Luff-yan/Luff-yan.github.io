@@ -1,0 +1,166 @@
+<html style=""
+    class=" modernizr_canvas modernizr_canvastext modernizr_cssremunit modernizr_rgba modernizr_opacity modernizr_lastchild modernizr_nthchild modernizr_bgpositionxy modernizr_borderradius modernizr_csstransforms">
+
+<head>
+    <meta charset="UTF-8">
+    <title>襄阳市</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/index/common.css">
+    <!-- IE8 HTML5 和  Respond.js 补丁。使 IE8 支持 HTML5 元素和媒体查询 -->
+    <!-- 警告: respond.min.js 不能通过 file:// 形式访问并看到效果。 -->
+    <!--[if lt IE 9]>
+<script src="/common/3rdLibs/bootstrap/js/html5shiv.min.js"></script>
+<script src="/common/3rdLibs/bootstrap/js/respond.min.js"></script>
+<![endif]-->
+    <script src="../../js/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="../../js/jquery/bootstarp.js" type="text/javascript"></script>
+    <script src="../../js/index/wdatepicker.js" type="text/javascript"></script>
+    <script src="../../js/index/moderlizi.js" type="text/javascript"></script>
+    <script src="../../js/index/common.js" type="text/javascript"></script>
+    <script src="../../js/index/page.js" type="text/javascript"></script>
+    <script src="../../js/index/layout.js" type="text/javascript"></script>
+    <script src="../../js/index/layer.js" type="text/javascript"></script>
+    <link href="../../css/index/wdatepicker.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../css/rewuchaxun/layer.css" id="layuicss-layer">
+
+
+    <script type="text/javascript">
+        // 向js暴露网络根路径。
+        var _system_static_rootPath = "";
+
+        var _biaodanMoBanSaveLocation = "biaodan_moban";
+    </script>
+    <link rel="icon" type="image/x-icon" href="/common/resources/icon/favicon.ico">
+    <script src="index.js" type="text/javascript"></script>
+    <script src="https://cdn.bootcss.com/spin.js/2.3.2/spin.min.js"></script>
+    <style type="text/css"></style>
+    <script src="loading.plugin.js" type="text/javascript"></script>
+    <style>
+        #chaxjg td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>数据同步</h3>
+    <form id="main" class="container" enctype="multipart/form-data">
+        <table class="condition table table-condensed">
+            <tbody>
+                <tr>
+                    <td><label for="diblx">类别</label></td>
+                    <td><select class="form-control" name="diblx" id="diblx">
+                            <option value="">请选择</option>
+                            <option value="城镇低保">城镇低保</option>
+                            <option value="农村低保">农村低保</option>
+                            <option value="三无人员">三无人员</option>
+                            <option value="五保人员">五保人员</option>
+                            <option value="临时救助">临时救助</option>
+                        </select></td>
+                    <td colspan="8" style="text-align: right">
+                        <button class="btn btn-primary" type="button" id="SynchronousData">同步</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel"
+        style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="errorModalLabel">提示</h4>
+                </div>
+                <div class="modal-body" id="errorModalContent"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loader_area" style="display: none;">
+        <div class="spinner" role="progressbar"
+            style="position: absolute; width: 0px; z-index: 2000000000; left: 50%; top: 50%;">
+            <div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-0-12;">
+                <div
+                    style="position: absolute; width: 12px; height: 5px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(0deg) translate(10px, 0px); border-radius: 2px;">
+                </div>
+            </div>
+            <div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-1-12;">
+                <div
+                    style="position: absolute; width: 12px; height: 5px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(30deg) translate(10px, 0px); border-radius: 2px;">
+                </div>
+            </div>
+            <div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-2-12;">
+                <div
+                    style="position: absolute; width: 12px; height: 5px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(60deg) translate(10px, 0px); border-radius: 2px;">
+                </div>
+            </div>
+            <div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-3-12;">
+                <div
+                    style="position: absolute; width: 12px; height: 5px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(90deg) translate(10px, 0px); border-radius: 2px;">
+                </div>
+            </div>
+            <div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-4-12;">
+                <div
+                    style="position: absolute; width: 12px; height: 5px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(120deg) translate(10px, 0px); border-radius: 2px;">
+                </div>
+            </div>
+            <div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-5-12;">
+                <div
+                    style="position: absolute; width: 12px; height: 5px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(150deg) translate(10px, 0px); border-radius: 2px;">
+                </div>
+            </div>
+            <div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-6-12;">
+                <div
+                    style="position: absolute; width: 12px; height: 5px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(180deg) translate(10px, 0px); border-radius: 2px;">
+                </div>
+            </div>
+            <div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-7-12;">
+                <div
+                    style="position: absolute; width: 12px; height: 5px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(210deg) translate(10px, 0px); border-radius: 2px;">
+                </div>
+            </div>
+            <div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-8-12;">
+                <div
+                    style="position: absolute; width: 12px; height: 5px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(240deg) translate(10px, 0px); border-radius: 2px;">
+                </div>
+            </div>
+            <div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-9-12;">
+                <div
+                    style="position: absolute; width: 12px; height: 5px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(270deg) translate(10px, 0px); border-radius: 2px;">
+                </div>
+            </div>
+            <div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-10-12;">
+                <div
+                    style="position: absolute; width: 12px; height: 5px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(300deg) translate(10px, 0px); border-radius: 2px;">
+                </div>
+            </div>
+            <div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-11-12;">
+                <div
+                    style="position: absolute; width: 12px; height: 5px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(330deg) translate(10px, 0px); border-radius: 2px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

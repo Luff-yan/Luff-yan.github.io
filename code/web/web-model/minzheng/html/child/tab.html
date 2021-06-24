@@ -1,0 +1,362 @@
+<html lang="zh-CN" style=""
+    class=" modernizr_canvas modernizr_canvastext modernizr_cssremunit modernizr_rgba modernizr_opacity modernizr_lastchild modernizr_nthchild modernizr_bgpositionxy modernizr_borderradius modernizr_csstransforms">
+
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <title>襄阳市</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/index/common.css">
+    <!-- IE8 HTML5 和  Respond.js 补丁。使 IE8 支持 HTML5 元素和媒体查询 -->
+    <!-- 警告: respond.min.js 不能通过 file:// 形式访问并看到效果。 -->
+    <!--[if lt IE 9]>
+<script src="/common/3rdLibs/bootstrap/js/html5shiv.min.js"></script>
+<script src="/common/3rdLibs/bootstrap/js/respond.min.js"></script>
+<![endif]-->
+    <script src="../../js/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="../../js/jquery/bootstarp.js" type="text/javascript"></script>
+    <script src="../../js/index/wdatepicker.js" type="text/javascript"></script>
+    <script src="../../js/index/moderlizi.js" type="text/javascript"></script>
+    <script src="../../js/index/common.js" type="text/javascript"></script>
+    <script src="../../js/index/page.js" type="text/javascript"></script>
+    <script src="../../js/index/layout.js" type="text/javascript"></script>
+    <script src="../../js/index/layer.js" type="text/javascript"></script>
+    <link href="../../css/index/wdatepicker.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../css/rewuchaxun/layer.css" id="layuicss-layer">
+
+
+    <script type="text/javascript">
+        // 向js暴露网络根路径。
+        var _system_static_rootPath = "";
+
+        var _biaodanMoBanSaveLocation = "biaodan_moban";
+    </script>
+    <link rel="icon" type="image/x-icon" href="/common/resources/icon/favicon.ico">
+    <script type="text/javascript" src="BGFL.js"></script>
+</head>
+
+<body>
+    <h3>表格分类</h3>
+    <form id="main" class="container">
+        <h4 class="formTitle">查询条件</h4>
+        <table class="condition table table-condensed">
+            <tbody>
+                <tr>
+                    <td><label for="FLMC">表格分类名称</label></td>
+                    <td><input type="text" class="form-control" name="FLMC" id="FLMC"></td>
+                    <td><label for="BDMC">分类所属表单</label></td>
+                    <td><input type="text" class="form-control" name="BDMC" id="BDMC"></td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: right">
+                        <button class="btn btn-primary" type="button" id="chax_c">查询</button>
+                        <button class="btn btn-success" type="button" id="xinjian_c">新建</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 class="formTitle">查询结果</h4>
+        <table class="result table table-condensed table-bordered table-hover" id="chaxjg">
+            <thead>
+                <tr>
+                    <th>表格分类名称</th>
+                    <th>分类所属表单</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>家庭基本情况</td>
+                    <td>城乡低保调查表(农村)</td>
+                    <td><a class="chakan_btn" pxxh="1" flmc="家庭基本情况" bz="" dataid="5af8f779bb461_nc"
+                            bdid="5b1fa509e7b41" href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="1"
+                            flmc="家庭基本情况" bz="" dataid="5af8f779bb461_nc" bdid="5b1fa509e7b41"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" pxxh="1" flmc="家庭基本情况" bz=""
+                            dataid="5af8f779bb461_nc" bdid="5b1fa509e7b41" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>基本信息</td>
+                    <td>社会救助调查表</td>
+                    <td><a class="chakan_btn" pxxh="1" flmc="基本信息" bz="" dataid="5af94b9d709bb" bdid="5af8f4d7673b4"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="1" flmc="基本信息" bz=""
+                            dataid="5af94b9d709bb" bdid="5af8f4d7673b4" href="javascript:void(0);">修改</a><a
+                            class="shanchu_btn" pxxh="1" flmc="基本信息" bz="" dataid="5af94b9d709bb" bdid="5af8f4d7673b4"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>基本信息</td>
+                    <td>满意度调查表</td>
+                    <td><a class="chakan_btn" pxxh="1" flmc="基本信息" bz="" dataid="5af94b8a85281" bdid="5af8f4cb24aab"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="1" flmc="基本信息" bz=""
+                            dataid="5af94b8a85281" bdid="5af8f4cb24aab" href="javascript:void(0);">修改</a><a
+                            class="shanchu_btn" pxxh="1" flmc="基本信息" bz="" dataid="5af94b8a85281" bdid="5af8f4cb24aab"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭基本情况</td>
+                    <td>临时救助调查表</td>
+                    <td><a class="chakan_btn" pxxh="1" flmc="家庭基本情况" bz="" dataid="5af8f6f7891b1" bdid="5af8f4bebde14"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="1" flmc="家庭基本情况" bz=""
+                            dataid="5af8f6f7891b1" bdid="5af8f4bebde14" href="javascript:void(0);">修改</a><a
+                            class="shanchu_btn" pxxh="1" flmc="家庭基本情况" bz="" dataid="5af8f6f7891b1" bdid="5af8f4bebde14"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭基本情况</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td><a class="chakan_btn" pxxh="1" flmc="家庭基本情况" bz="" dataid="5af8f779bb461_cz"
+                            bdid="5af8f48aec364" href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="1"
+                            flmc="家庭基本情况" bz="" dataid="5af8f779bb461_cz" bdid="5af8f48aec364"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" pxxh="1" flmc="家庭基本情况" bz=""
+                            dataid="5af8f779bb461_cz" bdid="5af8f48aec364" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭基本情况</td>
+                    <td>特困供养调查表</td>
+                    <td><a class="chakan_btn" pxxh="1" flmc="家庭基本情况" bz="" dataid="5af8f6433991a" bdid="5af8f4b12ab3b"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="1" flmc="家庭基本情况" bz=""
+                            dataid="5af8f6433991a" bdid="5af8f4b12ab3b" href="javascript:void(0);">修改</a><a
+                            class="shanchu_btn" pxxh="1" flmc="家庭基本情况" bz="" dataid="5af8f6433991a" bdid="5af8f4b12ab3b"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭信息</td>
+                    <td>特困供养调查表</td>
+                    <td><a class="chakan_btn" pxxh="10" flmc="家庭信息" bz="(1)" dataid="5b70de5674a2e" bdid="5af8f4b12ab3b"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="10" flmc="家庭信息" bz="(1)"
+                            dataid="5b70de5674a2e" bdid="5af8f4b12ab3b" href="javascript:void(0);">修改</a><a
+                            class="shanchu_btn" pxxh="10" flmc="家庭信息" bz="(1)" dataid="5b70de5674a2e"
+                            bdid="5af8f4b12ab3b" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭信息</td>
+                    <td>特困供养调查表</td>
+                    <td><a class="chakan_btn" pxxh="11" flmc="家庭信息" bz="" dataid="5b178c089e15d" bdid="5af8f4b12ab3b"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="11" flmc="家庭信息" bz=""
+                            dataid="5b178c089e15d" bdid="5af8f4b12ab3b" href="javascript:void(0);">修改</a><a
+                            class="shanchu_btn" pxxh="11" flmc="家庭信息" bz="" dataid="5b178c089e15d" bdid="5af8f4b12ab3b"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭财产信息</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td><a class="chakan_btn" pxxh="2" flmc="家庭财产信息" bz="（有数字或内容的按实际情况填写，无数字或内容的填无）"
+                            dataid="5af8f7090f842_cz" bdid="5af8f48aec364" href="javascript:void(0);">查看</a><a
+                            class="xiugai_btn" pxxh="2" flmc="家庭财产信息" bz="（有数字或内容的按实际情况填写，无数字或内容的填无）"
+                            dataid="5af8f7090f842_cz" bdid="5af8f48aec364" href="javascript:void(0);">修改</a><a
+                            class="shanchu_btn" pxxh="2" flmc="家庭财产信息" bz="（有数字或内容的按实际情况填写，无数字或内容的填无）"
+                            dataid="5af8f7090f842_cz" bdid="5af8f48aec364" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭财产信息</td>
+                    <td>特困供养调查表</td>
+                    <td><a class="chakan_btn" pxxh="2" flmc="家庭财产信息" bz="（有数字或内容的按实际情况填写，无数字或内容的填无）"
+                            dataid="5af8f654942ba" bdid="5af8f4b12ab3b" href="javascript:void(0);">查看</a><a
+                            class="xiugai_btn" pxxh="2" flmc="家庭财产信息" bz="（有数字或内容的按实际情况填写，无数字或内容的填无）"
+                            dataid="5af8f654942ba" bdid="5af8f4b12ab3b" href="javascript:void(0);">修改</a><a
+                            class="shanchu_btn" pxxh="2" flmc="家庭财产信息" bz="（有数字或内容的按实际情况填写，无数字或内容的填无）"
+                            dataid="5af8f654942ba" bdid="5af8f4b12ab3b" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭财产信息</td>
+                    <td>城乡低保调查表(农村)</td>
+                    <td><a class="chakan_btn" pxxh="2" flmc="家庭财产信息" bz="（有数字或内容的按实际情况填写，无数字或内容的填无）"
+                            dataid="5af8f7090f842_nc" bdid="5b1fa509e7b41" href="javascript:void(0);">查看</a><a
+                            class="xiugai_btn" pxxh="2" flmc="家庭财产信息" bz="（有数字或内容的按实际情况填写，无数字或内容的填无）"
+                            dataid="5af8f7090f842_nc" bdid="5b1fa509e7b41" href="javascript:void(0);">修改</a><a
+                            class="shanchu_btn" pxxh="2" flmc="家庭财产信息" bz="（有数字或内容的按实际情况填写，无数字或内容的填无）"
+                            dataid="5af8f7090f842_nc" bdid="5b1fa509e7b41" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭财产信息</td>
+                    <td>临时救助调查表</td>
+                    <td><a class="chakan_btn" pxxh="2" flmc="家庭财产信息" bz="" dataid="5af8f7897fbc1" bdid="5af8f4bebde14"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="2" flmc="家庭财产信息" bz=""
+                            dataid="5af8f7897fbc1" bdid="5af8f4bebde14" href="javascript:void(0);">修改</a><a
+                            class="shanchu_btn" pxxh="2" flmc="家庭财产信息" bz="" dataid="5af8f7897fbc1" bdid="5af8f4bebde14"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭生活水平</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td><a class="chakan_btn" pxxh="3" flmc="家庭生活水平" bz="" dataid="5af8f79730106_cz"
+                            bdid="5af8f48aec364" href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="3"
+                            flmc="家庭生活水平" bz="" dataid="5af8f79730106_cz" bdid="5af8f48aec364"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" pxxh="3" flmc="家庭生活水平" bz=""
+                            dataid="5af8f79730106_cz" bdid="5af8f48aec364" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭生活水平</td>
+                    <td>特困供养调查表</td>
+                    <td><a class="chakan_btn" pxxh="3" flmc="家庭生活水平" bz="" dataid="5af8f6643d854" bdid="5af8f4b12ab3b"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="3" flmc="家庭生活水平" bz=""
+                            dataid="5af8f6643d854" bdid="5af8f4b12ab3b" href="javascript:void(0);">修改</a><a
+                            class="shanchu_btn" pxxh="3" flmc="家庭生活水平" bz="" dataid="5af8f6643d854" bdid="5af8f4b12ab3b"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭生活水平</td>
+                    <td>临时救助调查表</td>
+                    <td><a class="chakan_btn" pxxh="3" flmc="家庭生活水平" bz="" dataid="5af8f71aa6ba5" bdid="5af8f4bebde14"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="3" flmc="家庭生活水平" bz=""
+                            dataid="5af8f71aa6ba5" bdid="5af8f4bebde14" href="javascript:void(0);">修改</a><a
+                            class="shanchu_btn" pxxh="3" flmc="家庭生活水平" bz="" dataid="5af8f71aa6ba5" bdid="5af8f4bebde14"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭生活水平</td>
+                    <td>城乡低保调查表(农村)</td>
+                    <td><a class="chakan_btn" pxxh="3" flmc="家庭生活水平" bz="" dataid="5af8f79730106_nc"
+                            bdid="5b1fa509e7b41" href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="3"
+                            flmc="家庭生活水平" bz="" dataid="5af8f79730106_nc" bdid="5b1fa509e7b41"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" pxxh="3" flmc="家庭生活水平" bz=""
+                            dataid="5af8f79730106_nc" bdid="5b1fa509e7b41" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭收支情况</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td><a class="chakan_btn" pxxh="4" flmc="家庭收支情况" bz="" dataid="5af8f6700c2da_cz"
+                            bdid="5af8f48aec364" href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="4"
+                            flmc="家庭收支情况" bz="" dataid="5af8f6700c2da_cz" bdid="5af8f48aec364"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" pxxh="4" flmc="家庭收支情况" bz=""
+                            dataid="5af8f6700c2da_cz" bdid="5af8f48aec364" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭收支情况</td>
+                    <td>城乡低保调查表(农村)</td>
+                    <td><a class="chakan_btn" pxxh="4" flmc="家庭收支情况" bz="" dataid="5af8f6700c2da_nc"
+                            bdid="5b1fa509e7b41" href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="4"
+                            flmc="家庭收支情况" bz="" dataid="5af8f6700c2da_nc" bdid="5b1fa509e7b41"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" pxxh="4" flmc="家庭收支情况" bz=""
+                            dataid="5af8f6700c2da_nc" bdid="5b1fa509e7b41" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭收支情况</td>
+                    <td>特困供养调查表</td>
+                    <td><a class="chakan_btn" pxxh="4" flmc="家庭收支情况" bz="" dataid="5af8f72b7402d" bdid="5af8f4b12ab3b"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="4" flmc="家庭收支情况" bz=""
+                            dataid="5af8f72b7402d" bdid="5af8f4b12ab3b" href="javascript:void(0);">修改</a><a
+                            class="shanchu_btn" pxxh="4" flmc="家庭收支情况" bz="" dataid="5af8f72b7402d" bdid="5af8f4b12ab3b"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>家庭收支情况</td>
+                    <td>临时救助调查表</td>
+                    <td><a class="chakan_btn" pxxh="4" flmc="家庭收支情况" bz="" dataid="5af8f7ab9d3e3" bdid="5af8f4bebde14"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" pxxh="4" flmc="家庭收支情况" bz=""
+                            dataid="5af8f7ab9d3e3" bdid="5af8f4bebde14" href="javascript:void(0);">修改</a><a
+                            class="shanchu_btn" pxxh="4" flmc="家庭收支情况" bz="" dataid="5af8f7ab9d3e3" bdid="5af8f4bebde14"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="pages">
+        </div>
+    </form>
+    <div class="modal fade" id="editorDialog" tabindex="-1" role="dialog" aria-labelledby="editorDialogLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="editorDialogLabel">新建表格分类</h4>
+                </div>
+                <form class="modal-body" id="editorForm">
+                    <input type="hidden" name="ID">
+                    <table class="infoForm table table-bordered" id="editorTable">
+                        <tbody>
+                            <tr>
+                                <td><label for="FLMC">表格分类名称</label></td>
+                                <td><input feikong="feikong" type="text" class="form-control" name="FLMC" id="FLMC">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="BDID">归属表单名称</label></td>
+                                <td>
+                                    <select feikong="feikong" class="form-control" name="BDID" id="BDID">
+                                        <option value="" selected="">请选择</option>
+                                        <option value="5af8f4b12ab3b">特困供养调查表</option>
+
+                                        <option value="5af8f4bebde14">临时救助调查表</option>
+
+                                        <option value="5af8f48aec364">城乡低保调查表(城镇)</option>
+
+                                        <option value="5af8f4cb24aab">满意度调查表</option>
+
+                                        <option value="5af8f4d7673b4">社会救助调查表</option>
+
+                                        <option value="5b1fa509e7b41">城乡低保调查表(农村)</option>
+
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="BZ">表格分类备注</label></td>
+                                <td><input type="text" class="form-control" name="BZ" id="BZ"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="PXXH">排序序号</label></td>
+                                <td><input feikong="feikong" type="text" class="form-control" name="PXXH" id="PXXH">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="saveBtn">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="fbConfirmDialog" tabindex="-1" role="dialog" aria-labelledby="fbConfirmDialogLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="fbConfirmDialogLabel">确认发布</h4>
+                </div>
+                <div class="modal-body">
+                    你确认要发布通知吗？发布后，系统将向您所选择的接收人发送此通知，您无法修改已发布的通知内容及接收人。
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="fbConfirmedBtn">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="scConfirmDialog" tabindex="-1" role="dialog" aria-labelledby="scConfirmDialogLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="scConfirmDialogLabel">确认删除</h4>
+                </div>
+                <div class="modal-body">
+                    你确认要删除通知吗？
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="scConfirmedBtn">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

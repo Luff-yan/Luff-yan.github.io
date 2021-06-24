@@ -1,0 +1,211 @@
+<html lang="zh-CN" style=""
+    class=" modernizr_canvas modernizr_canvastext modernizr_cssremunit modernizr_rgba modernizr_opacity modernizr_lastchild modernizr_nthchild modernizr_bgpositionxy modernizr_borderradius modernizr_csstransforms">
+
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <title>襄阳市</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/index/common.css">
+    <!-- IE8 HTML5 和  Respond.js 补丁。使 IE8 支持 HTML5 元素和媒体查询 -->
+    <!-- 警告: respond.min.js 不能通过 file:// 形式访问并看到效果。 -->
+    <!--[if lt IE 9]>
+<script src="/common/3rdLibs/bootstrap/js/html5shiv.min.js"></script>
+<script src="/common/3rdLibs/bootstrap/js/respond.min.js"></script>
+<![endif]-->
+    <script src="../../js/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="../../js/jquery/bootstarp.js" type="text/javascript"></script>
+    <script src="../../js/index/wdatepicker.js" type="text/javascript"></script>
+    <script src="../../js/index/moderlizi.js" type="text/javascript"></script>
+    <script src="../../js/index/common.js" type="text/javascript"></script>
+    <script src="../../js/index/page.js" type="text/javascript"></script>
+    <script src="../../js/index/layout.js" type="text/javascript"></script>
+    <script src="../../js/index/layer.js" type="text/javascript"></script>
+    <link href="../../css/index/wdatepicker.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../css/rewuchaxun/layer.css" id="layuicss-layer">
+
+    <script type="text/javascript">
+        // 向js暴露网络根路径。
+        var _system_static_rootPath = "";
+
+        var _biaodanMoBanSaveLocation = "biaodan_moban";
+    </script>
+    <link rel="icon" type="image/x-icon" href="/common/resources/icon/favicon.ico">
+    <script src="QUanXianIndex.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>权限管理</h2>
+    </div>
+    <form id="main" class="container">
+        <h4 class="formTitle">查询条件</h4>
+        <table class="condition table table-condensed">
+            <tbody>
+                <tr>
+                    <td><label for="YONGHM">账户</label></td>
+                    <td><input type="text" class="form-control" name="YONGHM" id="YONGHM"></td>
+                    <td><label for="XINGM">姓名</label></td>
+                    <td><input type="text" class="form-control" name="XINGM" id="XINGM"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="SUOYQX">所有权限</label>
+                    </td>
+                    <td colspan="3">
+                        <select class="form-control" name="SUOYQX" id="SUOYQX">
+                            <option value="">请选择</option>
+                            <option value="是">是</option>
+                            <option value="否">否</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: right">
+                        <button class="btn btn-primary" type="button" id="chax_c">查询</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 class="formTitle">查询结果</h4>
+        <table class="result table table-condensed table-bordered table-hover" id="chaxjg">
+            <thead>
+                <tr>
+                    <th>账户</th>
+                    <th>姓名</th>
+                    <th>所有权限</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>admin</td>
+                    <td>系统管理员</td>
+                    <td>是</td>
+                    <td><a href="QuanXianGuanLi.php?id=1" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>aqi</td>
+                    <td>阿旗</td>
+                    <td>是</td>
+                    <td><a href="QuanXianGuanLi.php?id=5B38910C594CD" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>dibaogu</td>
+                    <td>低保股</td>
+                    <td>是</td>
+                    <td><a href="QuanXianGuanLi.php?id=5D083C7ABE1FC" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>zhangnan</td>
+                    <td>张楠</td>
+                    <td>是</td>
+                    <td><a href="QuanXianGuanLi.php?id=5B7F540E095C5" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>oumulun</td>
+                    <td>欧沐沦</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BFB90208834B" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>tianshanzhen</td>
+                    <td>天山</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BF4B65D7E396" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>tianshankou</td>
+                    <td>天山口</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BF517CEEF516" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>shuangsheng</td>
+                    <td>xxx镇</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BF517F7EF4FA" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>kundu</td>
+                    <td>xxx镇</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BF518421B0BD" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>bayanhua</td>
+                    <td>巴彦花</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BF51858A86B7" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>shaogenzhen</td>
+                    <td>xxx镇</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BF518789DE98" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>zhagasitai</td>
+                    <td>扎嘎斯台</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BF5189D850BE" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>xinminxiang</td>
+                    <td>xxx镇</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BF518EB793E1" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>xianfengxiang</td>
+                    <td>xxx镇</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BF51907E3A4A" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>hansumu</td>
+                    <td>罕苏木</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BF5191E70154" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>saihantala</td>
+                    <td>赛罕塔拉</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BF5194F27132" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>balaqirude</td>
+                    <td>巴拉奇如德</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BF5196FE4EE3" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>bayanwenduer</td>
+                    <td>巴彦温都尔</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BF5198CEE65F" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>wulanhada</td>
+                    <td>乌兰哈达</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BF519AF322D7" id="caozuo">操作</a></td>
+                </tr>
+                <tr>
+                    <td>hanwula</td>
+                    <td>罕乌拉</td>
+                    <td>否</td>
+                    <td><a href="QuanXianGuanLi.php?id=5BFB8E8B28B7C" id="caozuo">操作</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>襄阳市</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/index/common.css">
+    <!-- IE8 HTML5 和  Respond.js 补丁。使 IE8 支持 HTML5 元素和媒体查询 -->
+    <!-- 警告: respond.min.js 不能通过 file:// 形式访问并看到效果。 -->
+    <!--[if lt IE 9]>
+<script src="/common/3rdLibs/bootstrap/js/html5shiv.min.js"></script>
+<script src="/common/3rdLibs/bootstrap/js/respond.min.js"></script>
+<![endif]-->
+    <script src="../../js/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="../../js/jquery/bootstarp.js" type="text/javascript"></script>
+    <script src="../../js/index/wdatepicker.js" type="text/javascript"></script>
+    <script src="../../js/index/moderlizi.js" type="text/javascript"></script>
+    <script src="../../js/index/common.js" type="text/javascript"></script>
+    <script src="../../js/index/page.js" type="text/javascript"></script>
+    <script src="../../js/index/layout.js" type="text/javascript"></script>
+    <script src="../../js/index/layer.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        // 向js暴露网络根路径。
+        var _system_static_rootPath = "";
+
+        var _biaodanMoBanSaveLocation = "biaodan_moban";
+    </script>
+    <link rel="icon" type="image/x-icon" href="/common/resources/icon/favicon.ico">
+    <style>
+        td {
+            text-align: center;
+        }
+    </style>
+    <script src="../../js/index/layer.js" type="text/javascript"></script>
+    <script src="../../js/renwuguanlichaxun/RenWuGuanLiChaXun.js" type="text/javascript"></script>
+    <style>
+        @media screen and (max-width: 1100px) {
+
+            .layui-layer-iframe {
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+
+        .layui-layer {
+            -webkit-overflow-scrolling: touch;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            -webkit-background-clip: content;
+            border-radius: 2px;
+            box-shadow: 1px 1px 50px rgb(0 0 0 / 30%);
+        }
+
+        .layui-layer,
+        .layui-layer-shade {
+            position: fixed;
+            _position: absolute;
+            pointer-events: auto;
+        }
+
+        .layui-layer-title {
+            padding: 0 80px 0 20px;
+            height: 42px;
+            line-height: 42px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+            color: #333;
+            overflow: hidden;
+            background-color: #F8F8F8;
+            border-radius: 2px 2px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>查询检测</h3>
+    <form id="main" class="container">
+        <h4 class="formTitle">查询条件</h4>
+        <table class="condition">
+            <tr>
+                <td><label for="xianjCondition">市</label></td>
+                <td>
+                    <select class="form-control" name="xianjCondition" id="xianjCondition">
+                        <option value="150421">襄阳市</option>
+                    </select>
+                </td>
+                <td><label for="zhenjCondition">街道/镇</label></td>
+                <td>
+                    <select class="form-control" name="zhenjCondition" id="zhenjCondition">
+                    </select>
+                </td>
+                <td><label for="cunjCondition">社区/村</label></td>
+                <td>
+                    <select class="form-control" name="cunjCondition" id="cunjCondition">
+                    </select>
+                </td>
+            </tr>
+            <script type="text/javascript">
+                var _____root_path______ = '';
+                function queryQuhuadiming() {
+                    var xianjCondition = $("#xianjCondition").val();
+                    var zhenjCondition = $("#zhenjCondition").val();
+                    var cunjCondition = $("#cunjCondition").val();
+                    $.post(_____root_path______ + "/common/php/diquliandong_ChaXun.php", { xianjCondition: xianjCondition, zhenjCondition: zhenjCondition, cunjCondition: cunjCondition }, function (data) {
+                        var is_ok = data['is_ok'];
+                        if (is_ok) {
+                            // 区划下拉列表
+                            var type = data['type'];
+                            if (type) {
+                                var list = data['quhuas'];
+                                var options = '<option value="" selected="selected">请选择</option>';
+                                $(list).each(function (index, model) {
+                                    options = options + '<option value="' + model['id'] + '">' + model['mingc'] + '</option>';
+                                });
+                                $("#" + type + "Condition").html(options);
+                            }
+                        } else {
+                            var msg = data['msg'];
+                            showmessage(msg, 1);
+                        }
+                    }, "json");
+                };
+                $("#xianjCondition").change(function () {
+                    $("#zhenjCondition").html('<option value="" selected="selected">请选择</option>');
+                    $("#cunjCondition").html('<option value="" selected="selected">请选择</option>');
+                    $("#zujCondition").html('<option value="" selected="selected">请选择</option>');
+                    queryQuhuadiming();
+                });
+                $("#zhenjCondition").change(function () {
+                    $("#cunjCondition").html('<option value="" selected="selected">请选择</option>');
+                    $("#zujCondition").html('<option value="" selected="selected">请选择</option>');
+                    queryQuhuadiming();
+                });
+                $("#cunjCondition").change(function () {
+                    $("#zujCondition").html('<option value="" selected="selected">请选择</option>');
+                    queryQuhuadiming();
+                });
+                queryQuhuadiming();
+            </script>
+            <tr>
+                <td><label for="KAISSJ">开始日期</label></td>
+                <td class="multiInputs">
+                    <input class="form-control date" name="KAISSJ" id="KAISSJ" type="text">
+                </td>
+                <td><label for="JIESSJ">结束日期</label></td>
+                <td class="multiInputs">
+                    <input class="form-control date" name="JIESSJ" id="JIESSJ" type="text">
+                </td>
+                <td><label for="zhuangt">状态</label></td>
+                <td><select class="form-control" name="zhuangt" id="zhuangt">
+                        <option value="已发布">已发布</option>
+                        <option value="已创建">已创建</option>
+                        <option value="已结束">已结束</option>
+                    </select></td>
+            </tr>
+            <tr>
+
+                <td colspan="8" style="text-align: right">
+                    <button class="btn btn-primary" type="button" id="chax_c">查询</button>
+                </td>
+            </tr>
+        </table>
+        <h4 class="formTitle">查询结果</h4>
+        <table class="result" id="chaxjg">
+            <thead>
+                <tr>
+                    <th>市</th>
+                    <th>日期起</th>
+                    <th>日期至</th>
+                    <th>状态</th>
+                    <th>类别</th>
+                    <th>户数</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>襄阳市—xxx办事处-前进社区居委会</td>
+                    <td>2019-04-09</td>
+                    <td>2019-04-12</td>
+                    <td>已发布 [2019-04-09]</td>
+                    <td>城镇低保</td>
+                    <td>170</td>
+                    <td><a class="chakan_btn" href="javascript:void(0);"
+                            onclick="document.getElementById('layui-layer100001').style.display='block'">查看</a><a
+                            class="shanchu_btn" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>襄阳市</td>
+                    <td>2019-04-01</td>
+                    <td>2019-04-30</td>
+                    <td>已发布 [2019-04-12]</td>
+                    <td>城镇低保</td>
+                    <td>1300</td>
+                    <td><a class="chakan_btn" href="javascript:void(0);">查看</a><a class="shanchu_btn"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>襄阳市</td>
+                    <td>2018-12-17</td>
+                    <td>2019-01-05</td>
+                    <td>已发布 [2018-12-17]</td>
+                    <td>农村低保</td>
+                    <td>12408</td>
+                    <td><a class="chakan_btn" href="javascript:void(0);">查看</a><a class="shanchu_btn"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>襄阳市</td>
+                    <td>2018-12-17</td>
+                    <td>2019-01-05</td>
+                    <td>已发布 [2018-12-17]</td>
+                    <td>城镇低保</td>
+                    <td>1516</td>
+                    <td><a class="chakan_btn" href="javascript:void(0);">查看</a><a class="shanchu_btn"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>襄阳市</td>
+                    <td>2018-11-19</td>
+                    <td>2018-12-31</td>
+                    <td>已发布 [2018-11-19]</td>
+                    <td>农村低保</td>
+                    <td>9719</td>
+                    <td><a class="chakan_btn" href="javascript:void(0);">查看</a><a class="shanchu_btn"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>襄阳市</td>
+                    <td>2018-11-19</td>
+                    <td>2018-12-31</td>
+                    <td>已发布 [2018-11-19]</td>
+                    <td>城镇低保</td>
+                    <td>1709</td>
+                    <td><a class="chakan_btn" href="javascript:void(0);">查看</a><a class="shanchu_btn"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>襄阳市</td>
+                    <td>2018-09-04</td>
+                    <td>2018-09-30</td>
+                    <td>已发布 [2018-09-04]</td>
+                    <td>农村低保</td>
+                    <td>82</td>
+                    <td><a class="chakan_btn" href="javascript:void(0);">查看</a><a class="shanchu_btn"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>襄阳市</td>
+                    <td>2018-07-05</td>
+                    <td>2018-08-31</td>
+                    <td>已发布 [2018-07-05]</td>
+                    <td>五保人员</td>
+                    <td>1170</td>
+                    <td><a class="chakan_btn" href="javascript:void(0);">查看</a><a class="shanchu_btn"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>襄阳市</td>
+                    <td>2018-07-05</td>
+                    <td>2018-08-31</td>
+                    <td>已发布 [2018-07-05]</td>
+                    <td>三无人员</td>
+                    <td>296</td>
+                    <td><a class="chakan_btn" href="javascript:void(0);">查看</a><a class="shanchu_btn"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="pages">
+        </div>
+    </form>
+    <div class="modal fade" id="fbrwConfirmDialog" tabindex="-1" role="dialog" aria-labelledby="fbrwConfirmDialogLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="fbConfirmDialogLabel">确认发布</h4>
+                </div>
+                <div class="modal-body">
+                    您真的确定要发布此任务吗？任务发布后，对任务基本信息的修改只能通过系统管理员后台操作。
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="fbrwConfirmedBtn">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="scrwConfirmDialog" tabindex="-1" role="dialog" aria-labelledby="scrwConfirmDialogLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="scConfirmDialogLabel">确认删除</h4>
+                </div>
+                <div class="modal-body">
+                    你确认要删除任务吗？
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="scrwConfirmedBtn">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel"
+        style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="errorModalLabel">提示</h4>
+                </div>
+                <div class="modal-body" id="errorModalContent">用户名或密码错误。</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-layer layui-layer-iframe" id="layui-layer100001" style="display: none;" type="iframe"
+        times="100001" showtime="0" contype="string"
+        style="z-index: 19991015; width: 380px; height: 90%; top: 39px; left: 270.5px;">
+        <div class="layui-layer-title" style="cursor: move;">查看任务</div>
+        <div id="" class="layui-layer-content"><iframe scrolling="auto" allowtransparency="true"
+                id="layui-layer-iframe100001" name="layui-layer-iframe100001" onload="this.className='';" class=""
+                frameborder="0" src="tabdetails.html" style="height: 400px;"></iframe></div><span
+            class="layui-layer-setwin"><a class="layui-layer-ico layui-layer-close layui-layer-close1"
+                href="javascript:;"></a></span><span class="layui-layer-resize"></span>
+        <button type="button" class="btn btn-danger" style="margin: 20px 0 20px 50% ;transform: translateX(-50%);"
+            onclick="document.getElementById('layui-layer100001').style.display='none'">关闭</button>
+    </div>
+    <script></script>
+</body>
+
+</html>

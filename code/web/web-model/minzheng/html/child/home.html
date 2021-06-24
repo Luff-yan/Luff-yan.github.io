@@ -1,0 +1,193 @@
+<html style=""
+    class=" modernizr_canvas modernizr_canvastext modernizr_cssremunit modernizr_rgba modernizr_opacity modernizr_lastchild modernizr_nthchild modernizr_bgpositionxy modernizr_borderradius modernizr_csstransforms">
+
+<head>
+    <meta charset="UTF-8">
+    <title>襄阳市</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/index/common.css">
+    <!-- IE8 HTML5 和  Respond.js 补丁。使 IE8 支持 HTML5 元素和媒体查询 -->
+    <!-- 警告: respond.min.js 不能通过 file:// 形式访问并看到效果。 -->
+    <!--[if lt IE 9]>
+<script src="/common/3rdLibs/bootstrap/js/html5shiv.min.js"></script>
+<script src="/common/3rdLibs/bootstrap/js/respond.min.js"></script>
+<![endif]-->
+    <script src="../../js/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="../../js/jquery/bootstarp.js" type="text/javascript"></script>
+    <script src="../../js/index/wdatepicker.js" type="text/javascript"></script>
+    <script src="../../js/index/moderlizi.js" type="text/javascript"></script>
+    <script src="../../js/index/common.js" type="text/javascript"></script>
+    <script src="../../js/index/page.js" type="text/javascript"></script>
+    <script src="../../js/index/layout.js" type="text/javascript"></script>
+    <script src="../../js/index/layer.js" type="text/javascript"></script>
+    <link href="../../css/index/wdatepicker.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../css/rewuchaxun/layer.css" id="layuicss-layer">
+
+    <script type="text/javascript">
+        // 向js暴露网络根路径。
+        var _system_static_rootPath = "";
+
+        var _biaodanMoBanSaveLocation = "biaodan_moban";
+    </script>
+    <link rel="icon" type="image/x-icon" href="/common/resources/icon/favicon.ico">
+    <script src="photoShoot.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <h3>添加家庭家计照片拍摄分类</h3>
+    <form id="main" class="container">
+        <input type="hidden" class="form-control" name="sctpwj" id="sctpwj" value="jiajtp.php">
+        <table class="condition table table-condensed">
+            <tbody>
+                <tr>
+                    <td><label for="lbmc">类别名称</label></td>
+                    <td><input type="text" class="form-control" name="lbmc" id="lbmc"></td>
+                    <td><label for="pxxh">排序序号</label></td>
+                    <td><input type="text" class="form-control" name="pxxh" id="pxxh"></td>
+
+                </tr>
+                <tr>
+                    <td><label for="bz">备注</label></td>
+                    <td><input type="text" class="form-control" name="bz" id="bz"></td>
+                    <td><label for="zpsl">照片数量</label></td>
+                    <td><input type="text" class="form-control" name="zpsl" id="zpsl"></td>
+                </tr>
+                <tr>
+
+                    <td colspan="8" style="text-align: right">
+                        <button class="btn btn-primary" type="button" id="insert">添加</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <h4 class="formTitle">已有的拍摄分类</h4>
+    <table class="result table table-condensed table-bordered table-hover" id="chaxjg">
+        <thead>
+            <tr>
+                <th>类别名称</th>
+                <th>排序序号</th>
+                <th>备注</th>
+                <th>照片数量</th>
+                <th>上传图片文件</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>家庭财产情况</td>
+                <td>3</td>
+                <td></td>
+                <td>2</td>
+                <td>jiajtp.php</td>
+                <td><a href="photoSHoot_update.php?id=3" id="caozuo">修改</a><a class="fabu_btn" dataid="3"
+                        href="javascript:void(0);">删除</a></td>
+            </tr>
+            <tr>
+                <td>门户牌</td>
+                <td>1</td>
+                <td></td>
+                <td>1</td>
+                <td>jiajtp.php</td>
+                <td><a href="photoSHoot_update.php?id=1" id="caozuo">修改</a><a class="fabu_btn" dataid="1"
+                        href="javascript:void(0);">删除</a></td>
+            </tr>
+            <tr>
+                <td>家庭基本情况</td>
+                <td>2</td>
+                <td></td>
+                <td>2</td>
+                <td>jiajtp.php</td>
+                <td><a href="photoSHoot_update.php?id=2" id="caozuo">修改</a><a class="fabu_btn" dataid="2"
+                        href="javascript:void(0);">删除</a></td>
+            </tr>
+            <tr>
+                <td>手持身份证照片</td>
+                <td>4</td>
+                <td></td>
+                <td>2</td>
+                <td>jiajtp.php</td>
+                <td><a href="photoSHoot_update.php?id=4" id="caozuo">修改</a><a class="fabu_btn" dataid="4"
+                        href="javascript:void(0);">删除</a></td>
+            </tr>
+            <tr>
+                <td>调查员与户主合影</td>
+                <td>5</td>
+                <td></td>
+                <td>1</td>
+                <td>jiajtp.php</td>
+                <td><a href="photoSHoot_update.php?id=6" id="caozuo">修改</a><a class="fabu_btn" dataid="6"
+                        href="javascript:void(0);">删除</a></td>
+            </tr>
+            <tr>
+                <td>其他证件</td>
+                <td>91</td>
+                <td></td>
+                <td>2</td>
+                <td>jiajtp.php</td>
+                <td><a href="photoSHoot_update.php?id=7" id="caozuo">修改</a><a class="fabu_btn" dataid="7"
+                        href="javascript:void(0);">删除</a></td>
+            </tr>
+            <tr>
+                <td>户口本</td>
+                <td>6</td>
+                <td></td>
+                <td>10</td>
+                <td>jiajtp.php</td>
+                <td><a href="photoSHoot_update.php?id=8" id="caozuo">修改</a><a class="fabu_btn" dataid="8"
+                        href="javascript:void(0);">删除</a></td>
+            </tr>
+            <tr>
+                <td>残疾证</td>
+                <td>9</td>
+                <td></td>
+                <td>2</td>
+                <td>jiajtp.php</td>
+                <td><a href="photoSHoot_update.php?id=9" id="caozuo">修改</a><a class="fabu_btn" dataid="9"
+                        href="javascript:void(0);">删除</a></td>
+            </tr>
+            <tr>
+                <td>房产证或租赁合同</td>
+                <td>7</td>
+                <td></td>
+                <td>5</td>
+                <td>jiajtp.php</td>
+                <td><a href="photoSHoot_update.php?id=10" id="caozuo">修改</a><a class="fabu_btn" dataid="10"
+                        href="javascript:void(0);">删除</a></td>
+            </tr>
+            <tr>
+                <td>金牛卡（一卡通）</td>
+                <td>8</td>
+                <td></td>
+                <td>2</td>
+                <td>jiajtp.php</td>
+                <td><a href="photoSHoot_update.php?id=11" id="caozuo">修改</a><a class="fabu_btn" dataid="11"
+                        href="javascript:void(0);">删除</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="modal fade" id="fbrwConfirmDialog" tabindex="-1" role="dialog" aria-labelledby="fbrwConfirmDialogLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="fbConfirmDialogLabel">确认删除</h4>
+                </div>
+                <div class="modal-body">
+                    您真的确定删除此类别吗？
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="fbrwConfirmedBtn">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

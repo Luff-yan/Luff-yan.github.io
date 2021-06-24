@@ -1,0 +1,575 @@
+<html lang="zh-CN" style=""
+    class=" modernizr_canvas modernizr_canvastext modernizr_cssremunit modernizr_rgba modernizr_opacity modernizr_lastchild modernizr_nthchild modernizr_bgpositionxy modernizr_borderradius modernizr_csstransforms">
+
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <title>襄阳市</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/index/common.css">
+    <!-- IE8 HTML5 和  Respond.js 补丁。使 IE8 支持 HTML5 元素和媒体查询 -->
+    <!-- 警告: respond.min.js 不能通过 file:// 形式访问并看到效果。 -->
+    <!--[if lt IE 9]>
+<script src="/common/3rdLibs/bootstrap/js/html5shiv.min.js"></script>
+<script src="/common/3rdLibs/bootstrap/js/respond.min.js"></script>
+<![endif]-->
+    <script src="../../js/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="../../js/jquery/bootstarp.js" type="text/javascript"></script>
+    <script src="../../js/index/wdatepicker.js" type="text/javascript"></script>
+    <script src="../../js/index/moderlizi.js" type="text/javascript"></script>
+    <script src="../../js/index/common.js" type="text/javascript"></script>
+    <script src="../../js/index/page.js" type="text/javascript"></script>
+    <script src="../../js/index/layout.js" type="text/javascript"></script>
+    <script src="../../js/index/layer.js" type="text/javascript"></script>
+    <link href="../../css/index/wdatepicker.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../css/rewuchaxun/layer.css" id="layuicss-layer">
+
+
+    <script type="text/javascript">
+        // 向js暴露网络根路径。
+        var _system_static_rootPath = "";
+
+        var _biaodanMoBanSaveLocation = "biaodan_moban";
+    </script>
+    <link rel="icon" type="image/x-icon" href="/common/resources/icon/favicon.ico">
+    <script type="text/javascript" src="ShuJuXiang.js"></script>
+</head>
+
+<body>
+    <h3>数据项管理</h3>
+    <form id="main" class="container">
+        <h4 class="formTitle">查询条件</h4>
+        <table class="condition table table-condensed">
+            <tbody>
+                <tr>
+                    <td><label for="FABR">创建人</label></td>
+                    <td><input type="text" class="form-control" name="FABR" id="FABR"></td>
+                    <td><label for="WENJMC">问题名称</label></td>
+                    <td><input type="text" class="form-control" name="WENTMC" id="WENTMC"></td>
+                    <td><label for="BDMC">表单名称</label></td>
+                    <td><input type="text" class="form-control" name="BDMC" id="BDMC"></td>
+
+                </tr>
+                <tr>
+                    <td><label for="FABRQQ">创建日期</label></td>
+                    <td colspan="4" class="multiInputs">
+                        <input class="form-control date" name="FABRQQ" id="FABRQQ" type="text">
+                        <label for="FABRQZ">至</label>
+                        <input class="form-control date" name="FABRQZ" id="FABRQZ" type="text">
+                    </td>
+                    <td style="text-align: right">
+                        <button class="btn btn-primary" type="button" id="chax_c">查询</button>
+                        <button class="btn btn-success" type="button" id="xinjian_c">新建</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 class="formTitle">查询结果</h4>
+        <table class="result table table-condensed table-bordered table-hover" id="chaxjg">
+            <thead>
+                <tr>
+                    <th>创建人</th>
+                    <th>问题名称</th>
+                    <th>表单名称</th>
+                    <th>创建日期</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>admin</td>
+                    <td>户主姓名</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-14 11:01:14</td>
+                    <td><a class="chakan_btn" flid="5af8f779bb461_cz" shujxbm="HUZXM" morz="#hzxm#" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0101000" bt="1" wt="户主姓名" lx="input" xxz=""
+                            dataid="a5af8fbff21ddc_cz" bdmc="城乡低保调查表(城镇)" szh="1" sjxbt="户主姓名"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f779bb461_cz"
+                            shujxbm="HUZXM" morz="#hzxm#" cjrid="1" bdid="5af8f48aec364" pxxh="0101000" bt="1" wt="户主姓名"
+                            lx="input" xxz="" dataid="a5af8fbff21ddc_cz" bdmc="城乡低保调查表(城镇)" szh="1" sjxbt="户主姓名"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" dataid="a5af8fbff21ddc_cz"
+                            bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>户主身份证号</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-14 11:09:24</td>
+                    <td><a class="chakan_btn" flid="5af8f779bb461_cz" shujxbm="HUZSFZ" morz="#hzsfzh#" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0102000" bt="1" wt="户主身份证号" lx="input" xxz=""
+                            dataid="a5af8fde41627f_cz" bdmc="城乡低保调查表(城镇)" szh="2" sjxbt="身份证号"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f779bb461_cz"
+                            shujxbm="HUZSFZ" morz="#hzsfzh#" cjrid="1" bdid="5af8f48aec364" pxxh="0102000" bt="1"
+                            wt="户主身份证号" lx="input" xxz="" dataid="a5af8fde41627f_cz" bdmc="城乡低保调查表(城镇)" szh="2"
+                            sjxbt="身份证号" href="javascript:void(0);">修改</a><a class="shanchu_btn"
+                            dataid="a5af8fde41627f_cz" bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>户主性别</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-14 11:10:12</td>
+                    <td><a class="chakan_btn" flid="5af8f779bb461_cz" shujxbm="HUZXB" morz="#hzxb#" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0103000" bt="1" wt="户主性别" lx="input" xxz=""
+                            dataid="a5af8fe144c967_cz" bdmc="城乡低保调查表(城镇)" szh="2" sjxbt="性别"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f779bb461_cz"
+                            shujxbm="HUZXB" morz="#hzxb#" cjrid="1" bdid="5af8f48aec364" pxxh="0103000" bt="1" wt="户主性别"
+                            lx="input" xxz="" dataid="a5af8fe144c967_cz" bdmc="城乡低保调查表(城镇)" szh="2" sjxbt="性别"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" dataid="a5af8fe144c967_cz"
+                            bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>户主年龄</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-14 11:11:20</td>
+                    <td><a class="chakan_btn" flid="5af8f779bb461_cz" shujxbm="HUZNL" morz="#hznl#" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0104000" bt="1" wt="户主年龄" lx="input" xxz=""
+                            dataid="a5af8fe5872b4f_cz" bdmc="城乡低保调查表(城镇)" szh="2" sjxbt="年龄"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f779bb461_cz"
+                            shujxbm="HUZNL" morz="#hznl#" cjrid="1" bdid="5af8f48aec364" pxxh="0104000" bt="1" wt="户主年龄"
+                            lx="input" xxz="" dataid="a5af8fe5872b4f_cz" bdmc="城乡低保调查表(城镇)" szh="2" sjxbt="年龄"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" dataid="a5af8fe5872b4f_cz"
+                            bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>户主联系电话</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-22 09:02:44</td>
+                    <td><a class="chakan_btn" flid="5af8f779bb461_cz" shujxbm="HUZLXDH" morz="" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0105000" bt="1" wt="户主联系电话" lx="input" xxz=""
+                            dataid="a5b036c3496608_cz" bdmc="城乡低保调查表(城镇)" szh="1" sjxbt="联系电话"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f779bb461_cz"
+                            shujxbm="HUZLXDH" morz="" cjrid="1" bdid="5af8f48aec364" pxxh="0105000" bt="1" wt="户主联系电话"
+                            lx="input" xxz="" dataid="a5b036c3496608_cz" bdmc="城乡低保调查表(城镇)" szh="1" sjxbt="联系电话"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" dataid="a5b036c3496608_cz"
+                            bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>家庭人口数</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-14 11:05:25</td>
+                    <td><a class="chakan_btn" flid="5af8f779bb461_cz" shujxbm="RENKS" morz="#rks#" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0106000" bt="1" wt="家庭人口数" lx="number" xxz=""
+                            dataid="a5af8fcf501ac5_cz" bdmc="城乡低保调查表(城镇)" szh="1" sjxbt="人口数"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f779bb461_cz"
+                            shujxbm="RENKS" morz="#rks#" cjrid="1" bdid="5af8f48aec364" pxxh="0106000" bt="1" wt="家庭人口数"
+                            lx="number" xxz="" dataid="a5af8fcf501ac5_cz" bdmc="城乡低保调查表(城镇)" szh="1" sjxbt="人口数"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" dataid="a5af8fcf501ac5_cz"
+                            bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>主要收入来源</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-14 11:07:53</td>
+                    <td><a class="chakan_btn" flid="5af8f779bb461_cz" shujxbm="SHOURLY" morz="无" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0107000" bt="1" wt="主要收入来源" lx="radio"
+                            xxz="无,耕地,养殖,外出打工,经营,救济,其它" dataid="a5af8fd89541fa_cz" bdmc="城乡低保调查表(城镇)" szh="1"
+                            sjxbt="主要收入来源" href="javascript:void(0);">查看</a><a class="xiugai_btn"
+                            flid="5af8f779bb461_cz" shujxbm="SHOURLY" morz="无" cjrid="1" bdid="5af8f48aec364"
+                            pxxh="0107000" bt="1" wt="主要收入来源" lx="radio" xxz="无,耕地,养殖,外出打工,经营,救济,其它"
+                            dataid="a5af8fd89541fa_cz" bdmc="城乡低保调查表(城镇)" szh="1" sjxbt="主要收入来源"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" dataid="a5af8fd89541fa_cz"
+                            bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>家庭月总收入</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-14 11:41:51</td>
+                    <td><a class="chakan_btn" flid="5af8f6700c2da_cz" shujxbm="JIATYZSR" morz="" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0108000" bt="1" wt="家庭月总收入" lx="number" xxz=""
+                            dataid="a5af9057fd2a0b_cz" bdmc="城乡低保调查表(城镇)" szh="13" sjxbt="家庭月总收入"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f6700c2da_cz"
+                            shujxbm="JIATYZSR" morz="" cjrid="1" bdid="5af8f48aec364" pxxh="0108000" bt="1" wt="家庭月总收入"
+                            lx="number" xxz="" dataid="a5af9057fd2a0b_cz" bdmc="城乡低保调查表(城镇)" szh="13" sjxbt="家庭月总收入"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" dataid="a5af9057fd2a0b_cz"
+                            bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>家庭月总支出</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-14 11:43:33</td>
+                    <td><a class="chakan_btn" flid="5af8f6700c2da_cz" shujxbm="JIATYZZC" morz="" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0109000" bt="1" wt="家庭月总支出" lx="number" xxz=""
+                            dataid="a5af905e5df052_cz" bdmc="城乡低保调查表(城镇)" szh="13" sjxbt="家庭月总支出（元）"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f6700c2da_cz"
+                            shujxbm="JIATYZZC" morz="" cjrid="1" bdid="5af8f48aec364" pxxh="0109000" bt="1" wt="家庭月总支出"
+                            lx="number" xxz="" dataid="a5af905e5df052_cz" bdmc="城乡低保调查表(城镇)" szh="13" sjxbt="家庭月总支出（元）"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" dataid="a5af905e5df052_cz"
+                            bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>房屋面积</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-14 11:15:19</td>
+                    <td><a class="chakan_btn" flid="5af8f7090f842_cz" shujxbm="FANGWMJ" morz="" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0201000" bt="1" wt="房屋面积" lx="number" xxz=""
+                            dataid="a5af8ff47b5560_cz" bdmc="城乡低保调查表(城镇)" szh="9" sjxbt="房屋面积（㎡）"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f7090f842_cz"
+                            shujxbm="FANGWMJ" morz="" cjrid="1" bdid="5af8f48aec364" pxxh="0201000" bt="1" wt="房屋面积"
+                            lx="number" xxz="" dataid="a5af8ff47b5560_cz" bdmc="城乡低保调查表(城镇)" szh="9" sjxbt="房屋面积（㎡）"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" dataid="a5af8ff47b5560_cz"
+                            bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>房屋性质</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-14 11:18:12</td>
+                    <td><a class="chakan_btn" flid="5af8f7090f842_cz" shujxbm="FANGWXZ" morz="砖混结构" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0202000" bt="1" wt="房屋性质" lx="radio"
+                            xxz="土坯房,砖木结构 ,砖混结构,混凝土结构,钢筋混凝土结构,临时建筑" dataid="a5bf8fff419581_cz" bdmc="城乡低保调查表(城镇)"
+                            szh="8" sjxbt="房屋性质" href="javascript:void(0);">查看</a><a class="xiugai_btn"
+                            flid="5af8f7090f842_cz" shujxbm="FANGWXZ" morz="砖混结构" cjrid="1" bdid="5af8f48aec364"
+                            pxxh="0202000" bt="1" wt="房屋性质" lx="radio" xxz="土坯房,砖木结构 ,砖混结构,混凝土结构,钢筋混凝土结构,临时建筑"
+                            dataid="a5bf8fff419581_cz" bdmc="城乡低保调查表(城镇)" szh="8" sjxbt="房屋性质"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" dataid="a5bf8fff419581_cz"
+                            bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>住房性质</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-14 11:24:37</td>
+                    <td><a class="chakan_btn" flid="5af8f7090f842_cz" shujxbm="ZHUFXZ" morz="自建房" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0203000" bt="1" wt="住房性质" lx="radio"
+                            xxz="廉租房,自建房,商品房,经济适用房,央产房,公租房,集资建房" dataid="a5af901754abbf_cz" bdmc="城乡低保调查表(城镇)" szh="9"
+                            sjxbt="住房性质" href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f7090f842_cz"
+                            shujxbm="ZHUFXZ" morz="自建房" cjrid="1" bdid="5af8f48aec364" pxxh="0203000" bt="1" wt="住房性质"
+                            lx="radio" xxz="廉租房,自建房,商品房,经济适用房,央产房,公租房,集资建房" dataid="a5af901754abbf_cz"
+                            bdmc="城乡低保调查表(城镇)" szh="9" sjxbt="住房性质" href="javascript:void(0);">修改</a><a
+                            class="shanchu_btn" dataid="a5af901754abbf_cz" bdmc="城乡低保调查表(城镇)"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>家庭有无经营（养殖）</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-14 11:31:25</td>
+                    <td><a class="chakan_btn" flid="5af8f7090f842_cz" shujxbm="YOUWJY" morz="无" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0204000" bt="1" wt="家庭有无经营（养殖）" lx="radio" xxz="无,有"
+                            dataid="a5af9030d19e4c_cz" bdmc="城乡低保调查表(城镇)" szh="9" sjxbt="有无经营（养殖）"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f7090f842_cz"
+                            shujxbm="YOUWJY" morz="无" cjrid="1" bdid="5af8f48aec364" pxxh="0204000" bt="1"
+                            wt="家庭有无经营（养殖）" lx="radio" xxz="无,有" dataid="a5af9030d19e4c_cz" bdmc="城乡低保调查表(城镇)" szh="9"
+                            sjxbt="有无经营（养殖）" href="javascript:void(0);">修改</a><a class="shanchu_btn"
+                            dataid="a5af9030d19e4c_cz" bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>是否有车辆</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-14 11:32:28</td>
+                    <td><a class="chakan_btn" flid="5af8f7090f842_cz" shujxbm="CHEL" morz="无" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0205000" bt="1" wt="是否有车辆" lx="radio" xxz="无,自有农耕,租赁农耕,轿车"
+                            dataid="a5af9034c80afb_cz" bdmc="城乡低保调查表(城镇)" szh="10" sjxbt="车辆"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f7090f842_cz"
+                            shujxbm="CHEL" morz="无" cjrid="1" bdid="5af8f48aec364" pxxh="0205000" bt="1" wt="是否有车辆"
+                            lx="radio" xxz="无,自有农耕,租赁农耕,轿车" dataid="a5af9034c80afb_cz" bdmc="城乡低保调查表(城镇)" szh="10"
+                            sjxbt="车辆" href="javascript:void(0);">修改</a><a class="shanchu_btn"
+                            dataid="a5af9034c80afb_cz" bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>是否有牲畜</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-14 11:33:42</td>
+                    <td><a class="chakan_btn" flid="5af8f7090f842_cz" shujxbm="SHENGC" morz="无" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0206000" bt="1" wt="是否有牲畜" lx="radio" xxz="无,有"
+                            dataid="a5af9039634605_cz" bdmc="城乡低保调查表(城镇)" szh="10" sjxbt="是否有牲畜"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f7090f842_cz"
+                            shujxbm="SHENGC" morz="无" cjrid="1" bdid="5af8f48aec364" pxxh="0206000" bt="1" wt="是否有牲畜"
+                            lx="radio" xxz="无,有" dataid="a5af9039634605_cz" bdmc="城乡低保调查表(城镇)" szh="10" sjxbt="是否有牲畜"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" dataid="a5af9039634605_cz"
+                            bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>牲畜</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-29 16:54:17</td>
+                    <td><a class="chakan_btn" flid="5af8f7090f842_cz" shujxbm="SHENGCNR" morz="" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0207000" bt="2" wt="牲畜" lx="radio" xxz="骡子,驴,马,耕牛"
+                            dataid="a5b0d15396ed96_cz" bdmc="城乡低保调查表(城镇)" szh="1" sjxbt="牲畜主要有什么"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f7090f842_cz"
+                            shujxbm="SHENGCNR" morz="" cjrid="1" bdid="5af8f48aec364" pxxh="0207000" bt="2" wt="牲畜"
+                            lx="radio" xxz="骡子,驴,马,耕牛" dataid="a5b0d15396ed96_cz" bdmc="城乡低保调查表(城镇)" szh="1"
+                            sjxbt="牲畜主要有什么" href="javascript:void(0);">修改</a><a class="shanchu_btn"
+                            dataid="a5b0d15396ed96_cz" bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>是否经营农业</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-29 17:19:11</td>
+                    <td><a class="chakan_btn" flid="5af8f7090f842_cz" shujxbm="NONGY" morz="无" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0208000" bt="1" wt="是否经营农业" lx="radio" xxz="无,有"
+                            dataid="a5b0d1b0f57854_cz" bdmc="城乡低保调查表(城镇)" szh="1" sjxbt="农业"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f7090f842_cz"
+                            shujxbm="NONGY" morz="无" cjrid="1" bdid="5af8f48aec364" pxxh="0208000" bt="1" wt="是否经营农业"
+                            lx="radio" xxz="无,有" dataid="a5b0d1b0f57854_cz" bdmc="城乡低保调查表(城镇)" szh="1" sjxbt="农业"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" dataid="a5b0d1b0f57854_cz"
+                            bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>农田多少亩</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-29 17:29:15</td>
+                    <td><a class="chakan_btn" flid="5af8f7090f842_cz" shujxbm="NONGTMS" morz="" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0209000" bt="2" wt="农田多少亩" lx="radio" xxz="1亩以下,1-3亩,3亩以上"
+                            dataid="a5b0d1d6b4551a_cz" bdmc="城乡低保调查表(城镇)" szh="1" sjxbt="农田多少亩"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f7090f842_cz"
+                            shujxbm="NONGTMS" morz="" cjrid="1" bdid="5af8f48aec364" pxxh="0209000" bt="2" wt="农田多少亩"
+                            lx="radio" xxz="1亩以下,1-3亩,3亩以上" dataid="a5b0d1d6b4551a_cz" bdmc="城乡低保调查表(城镇)" szh="1"
+                            sjxbt="农田多少亩" href="javascript:void(0);">修改</a><a class="shanchu_btn"
+                            dataid="a5b0d1d6b4551a_cz" bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>是否经营林业</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-29 17:19:11</td>
+                    <td><a class="chakan_btn" flid="5af8f7090f842_cz" shujxbm="LINY" morz="无" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0210000" bt="1" wt="是否经营林业" lx="radio" xxz="无,有"
+                            dataid="a6b0d1b0f57854_cz" bdmc="城乡低保调查表(城镇)" szh="1" sjxbt="林业"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f7090f842_cz"
+                            shujxbm="LINY" morz="无" cjrid="1" bdid="5af8f48aec364" pxxh="0210000" bt="1" wt="是否经营林业"
+                            lx="radio" xxz="无,有" dataid="a6b0d1b0f57854_cz" bdmc="城乡低保调查表(城镇)" szh="1" sjxbt="林业"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" dataid="a6b0d1b0f57854_cz"
+                            bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>林田多少亩</td>
+                    <td>城乡低保调查表(城镇)</td>
+                    <td>2018-05-29 17:29:15</td>
+                    <td><a class="chakan_btn" flid="5af8f7090f842_cz" shujxbm="LINTMS" morz="" cjrid="1"
+                            bdid="5af8f48aec364" pxxh="0211000" bt="2" wt="林田多少亩" lx="radio" xxz="1亩以下,1-3亩,3亩以上"
+                            dataid="a6b0d1d6b4551a_cz" bdmc="城乡低保调查表(城镇)" szh="1" sjxbt="林田多少亩"
+                            href="javascript:void(0);">查看</a><a class="xiugai_btn" flid="5af8f7090f842_cz"
+                            shujxbm="LINTMS" morz="" cjrid="1" bdid="5af8f48aec364" pxxh="0211000" bt="2" wt="林田多少亩"
+                            lx="radio" xxz="1亩以下,1-3亩,3亩以上" dataid="a6b0d1d6b4551a_cz" bdmc="城乡低保调查表(城镇)" szh="1"
+                            sjxbt="林田多少亩" href="javascript:void(0);">修改</a><a class="shanchu_btn"
+                            dataid="a6b0d1d6b4551a_cz" bdmc="城乡低保调查表(城镇)" href="javascript:void(0);">删除</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="pages">
+        </div>
+    </form>
+    <div class="modal fade" id="editorDialog" tabindex="-1" role="dialog" aria-labelledby="editorDialogLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="editorDialogLabel">新建数据项</h4>
+                </div>
+                <form class="modal-body" id="editorForm">
+                    <input type="hidden" name="ID">
+                    <table class="infoForm table table-bordered" id="editorTable">
+                        <tbody>
+                            <tr>
+                                <td><label for="WT">问题名称</label></td>
+                                <td><input feikong="feikong" type="text" class="form-control" name="WT" id="WT"></td>
+                                <td>
+                                    <sapn style="color:red">*</sapn>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="LX">问题类型</label></td>
+                                <td>
+                                    <select feikong="feikong" class="form-control" name="LX" id="LX">
+                                        <option value="" selected="">请选择</option>
+                                        <option value="input">input输入框</option>
+                                        <option value="radio">radio单选</option>
+                                        <option value="textarea">textarea文本域</option>
+                                        <option value="number">number数字类型</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <sapn style="color:red">*</sapn>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="XXZ">问题选项</label></td>
+                                <td><input type="text" class="form-control" name="XXZ" id="XXZ"></td>
+                                <td>当问题类型为radio时，<br>为必填项（其他问题类型，可不填）<br>
+                                    <sapn style="color:red">多个问题请用','隔开</sapn>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="MORZ">默认值</label></td>
+                                <td><input type="text" class="form-control" name="MORZ" id="MORZ"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><label for="BT">是否必填</label></td>
+                                <td>
+                                    <select feikong="feikong" class="form-control" name="BT" id="BT">
+                                        <option value="0">请选择</option>
+                                        <option value="2">否</option>
+                                        <option value="1">是</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <sapn style="color:red">*</sapn>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="PXXH">在表单中的排序</label></td>
+                                <td><input feikong="feikong" type="text" class="form-control" name="PXXH" id="PXXH">
+                                </td>
+                                <td>
+                                    <sapn style="color:red">*</sapn>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="SHUJXBM">数据项编码</label></td>
+                                <td><input feikong="feikong" type="text" class="form-control" name="SHUJXBM"
+                                        id="SHUJXBM"></td>
+                                <td>
+                                    <sapn style="color:red">*</sapn>数据项在模板中宏的定义，<br>格式只能由小写字母，大写字母，数字构成,不能超过50字符
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="SZH">数据项在表格中所在行</label></td>
+                                <td><input feikong="feikong" type="text" class="form-control" name="SZH" id="SZH"></td>
+                                <td>
+                                    <sapn style="color:red">*</sapn>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="SJXBT">数据项在表格中所在名称</label></td>
+                                <td><input feikong="feikong" type="text" class="form-control" name="SJXBT" id="SJXBT">
+                                </td>
+                                <td>
+                                    <sapn style="color:red">*</sapn>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="BDID">归属表单</label></td>
+                                <td>
+                                    <select feikong="feikong" class="form-control" name="BDID" id="BDID">
+                                        <option value="">请选择</option>
+                                        <option value="5af8f4b12ab3b">特困供养调查表</option>
+
+                                        <option value="5af8f4bebde14">临时救助调查表</option>
+
+                                        <option value="5af8f48aec364">城乡低保调查表(城镇)</option>
+
+                                        <option value="5af8f4cb24aab">满意度调查表</option>
+
+                                        <option value="5af8f4d7673b4">社会救助调查表</option>
+
+                                        <option value="5b1fa509e7b41">城乡低保调查表(农村)</option>
+
+                                    </select>
+                                </td>
+                                <td>
+                                    <sapn style="color:red">*</sapn>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="FLID">数据项在表格中分类</label></td>
+                                <td>
+                                    <select feikong="feikong" class="form-control" name="FLID" id="FLID">
+                                        <option value="">请选择</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <sapn style="color:red">*</sapn>
+                                </td>
+                            </tr>
+                            <script type="text/javascript">
+                                var _____root_path______ = '';
+                                function queryQuhuadiming() {
+                                    var BDID = $("#BDID").val();
+                                    var FLID = $("#FLID").val();
+                                    $.post(_____root_path______ + "/HouTai/WenJuan/newfile_ChaXun.php", { FLID: FLID, BDID: BDID }, function (data) {
+                                        var is_ok = data['is_ok'];
+                                        if (is_ok) {
+                                            var list = data['data'];
+                                            var options = '<option value="" >请选择</option>';
+                                            $(list).each(function (index, model) {
+                                                options = options + '<option value="' + model['ID'] + '">' + model['FLMC'] + '</option>';
+                                            });
+                                            $("#FLID").html(options);
+
+                                        } else {
+                                            var msg = data['msg'];
+                                            showmessage(msg, 1);
+                                        }
+                                    }, "json");
+                                };
+                                $("#BDID").change(function () {
+                                    $("#FLID").html('<option value="" selected="selected">请选择</option>');
+                                    queryQuhuadiming();
+                                });
+                                queryQuhuadiming();
+                            </script>
+                        </tbody>
+                    </table>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="saveBtn">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="fbConfirmDialog" tabindex="-1" role="dialog" aria-labelledby="fbConfirmDialogLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="fbConfirmDialogLabel">确认发布</h4>
+                </div>
+                <div class="modal-body">
+                    你确认要发布通知吗？发布后，系统将向您所选择的接收人发送此通知，您无法修改已发布的通知内容及接收人。
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="fbConfirmedBtn">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="scConfirmDialog" tabindex="-1" role="dialog" aria-labelledby="scConfirmDialogLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="scConfirmDialogLabel">确认删除</h4>
+                </div>
+                <div class="modal-body">
+                    你确认要删除通知吗？
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="scConfirmedBtn">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

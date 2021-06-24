@@ -1,0 +1,209 @@
+<html lang="zh-CN" style=""
+    class=" modernizr_canvas modernizr_canvastext modernizr_cssremunit modernizr_rgba modernizr_opacity modernizr_lastchild modernizr_nthchild modernizr_bgpositionxy modernizr_borderradius modernizr_csstransforms">
+
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <title>襄阳市</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/index/common.css">
+    <!-- IE8 HTML5 和  Respond.js 补丁。使 IE8 支持 HTML5 元素和媒体查询 -->
+    <!-- 警告: respond.min.js 不能通过 file:// 形式访问并看到效果。 -->
+    <!--[if lt IE 9]>
+<script src="/common/3rdLibs/bootstrap/js/html5shiv.min.js"></script>
+<script src="/common/3rdLibs/bootstrap/js/respond.min.js"></script>
+<![endif]-->
+    <script src="../../js/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="../../js/jquery/bootstarp.js" type="text/javascript"></script>
+    <script src="../../js/index/wdatepicker.js" type="text/javascript"></script>
+    <script src="../../js/index/moderlizi.js" type="text/javascript"></script>
+    <script src="../../js/index/common.js" type="text/javascript"></script>
+    <script src="../../js/index/page.js" type="text/javascript"></script>
+    <script src="../../js/index/layout.js" type="text/javascript"></script>
+    <script src="../../js/index/layer.js" type="text/javascript"></script>
+    <link href="../../css/index/wdatepicker.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../css/rewuchaxun/layer.css" id="layuicss-layer">
+
+
+    <script type="text/javascript">
+        // 向js暴露网络根路径。
+        var _system_static_rootPath = "";
+
+        var _biaodanMoBanSaveLocation = "biaodan_moban";
+    </script>
+    <link rel="icon" type="image/x-icon" href="/common/resources/icon/favicon.ico">
+    <script type="text/javascript" src="TongZhiGuanLi.js"></script>
+</head>
+
+<body>
+    <h3>通知信息管理</h3>
+    <form id="main" class="container">
+        <h4 class="formTitle">查询条件</h4>
+        <table class="condition table table-condensed">
+            <tbody>
+                <tr>
+                    <td><label for="FABR">发布人</label></td>
+                    <td><input type="text" class="form-control" name="FABR" id="FABR"></td>
+                    <td><label for="ZHUANGT">状态</label></td>
+                    <td><select class="form-control" name="ZHUANGT" id="ZHUANGT">
+                            <option value="">请选择</option>
+                            <option value="已创建">已创建</option>
+                            <option value="已发布">已发布</option>
+                        </select></td>
+                    <td><label for="JIESR">接收人</label></td>
+                    <td><select class="form-control" name="JIESR" id="JIESR">
+                            <option value="">请选择</option>
+                            <option value="用户">用户</option>
+                            <option value="用户及调查员">用户及调查员</option>
+                            <option value="调查员">调查员</option>
+                            <!-- 						<option value="本级、下级业务人员及享受对象">本级、下级业务人员及享受对象</option> -->
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label for="BIAOT">标题</label></td>
+                    <td><input type="text" class="form-control" name="BIAOT" id="BIAOT"></td>
+                    <td><label for="FABRQQ">发布日期</label></td>
+                    <td colspan="4" class="multiInputs">
+                        <input class="form-control date" name="FABRQQ" id="FABRQQ" type="text">
+                        <label for="FABRQZ">至</label>
+                        <input class="form-control date" name="FABRQZ" id="FABRQZ" type="text">
+                    </td>
+                    <td style="text-align: right">
+                        <button class="btn btn-primary" type="button" id="chax_c">查询</button>
+                        <button class="btn btn-success" type="button" id="xinjian_c">新建通知</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 class="formTitle">查询结果</h4>
+        <table class="result table table-condensed table-bordered table-hover" id="chaxjg">
+            <thead>
+                <tr>
+                    <th>发布人</th>
+                    <th>接收人</th>
+                    <th>状态</th>
+                    <th>标题</th>
+                    <th>内容</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>系统管理员</td>
+                    <td>用户</td>
+                    <td>已创建</td>
+                    <td>中国部署进一步做好稳定和扩大就业工作</td>
+                    <td>二二二</td>
+                    <td><a class="chakan_btn" dataid="5bf3794d93f20" dataneir="二二二" datajiesr="用户"
+                            databiaot="中国部署进一步做好稳定和扩大就业工作" href="javascript:void(0);">查看</a><a class="xiugai_btn"
+                            dataid="5bf3794d93f20" dataneir="二二二" datajiesr="用户" databiaot="中国部署进一步做好稳定和扩大就业工作"
+                            href="javascript:void(0);">修改</a><a class="shanchu_btn" dataid="5bf3794d93f20"
+                            dataneir="二二二" datajiesr="用户" databiaot="中国部署进一步做好稳定和扩大就业工作"
+                            href="javascript:void(0);">删除</a></td>
+                </tr>
+                <tr>
+                    <td>系统管理员</td>
+                    <td>用户</td>
+                    <td>已发布 [2018-11-20]</td>
+                    <td>asdf</td>
+                    <td>adf</td>
+                    <td><a class="chakan_btn" dataid="5bf3702488bf7" dataneir="adf" datajiesr="用户" databiaot="asdf"
+                            href="javascript:void(0);">查看</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="pages">
+        </div>
+    </form>
+    <div class="modal fade" id="editorDialog" tabindex="-1" role="dialog" aria-labelledby="editorDialogLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="editorDialogLabel">编辑通知信息</h4>
+                </div>
+                <form class="modal-body" id="editorForm">
+                    <input type="hidden" name="ID">
+                    <table class="infoForm table table-bordered" id="editorTable">
+                        <tbody>
+                            <tr>
+                                <td><label for="JIESR_EDIT">接收人</label></td>
+                                <td>
+                                    <select feikong="feikong" class="form-control" name="JIESR" id="JIESR_EDIT">
+                                        <option value="">请选择</option>
+                                        <option value="用户">用户</option>
+                                        <option value="用户及调查员">用户及调查员</option>
+                                        <option value="调查员">调查员</option>
+                                        <!-- 									<option value="本级、下级业务人员及享受对象">本级、下级业务人员及享受对象</option> -->
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="BIAOT">标题</label></td>
+                                <td><input type="text" class="form-control" name="BIAOT" id="BIAOT"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="NEIR_EDIT">内容</label></td>
+                                <td>
+                                    <textarea feikong="feikong" class="form-control" name="NEIR"
+                                        id="NEIR_EDIT"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="saveBtn">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="fbConfirmDialog" tabindex="-1" role="dialog" aria-labelledby="fbConfirmDialogLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="fbConfirmDialogLabel">确认发布</h4>
+                </div>
+                <div class="modal-body">
+                    你确认要发布通知吗？发布后，系统将向您所选择的接收人发送此通知，您无法修改已发布的通知内容及接收人。
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="fbConfirmedBtn">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="scConfirmDialog" tabindex="-1" role="dialog" aria-labelledby="scConfirmDialogLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="scConfirmDialogLabel">确认删除</h4>
+                </div>
+                <div class="modal-body">
+                    你确认要删除通知吗？
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="scConfirmedBtn">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

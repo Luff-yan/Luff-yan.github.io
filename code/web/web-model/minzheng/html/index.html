@@ -1,0 +1,774 @@
+<html lang="zh-CN" style=""
+    class=" modernizr_canvas modernizr_canvastext modernizr_cssremunit modernizr_rgba modernizr_opacity modernizr_lastchild modernizr_nthchild modernizr_bgpositionxy modernizr_borderradius modernizr_csstransforms modernizr_canvas modernizr_canvastext modernizr_cssremunit modernizr_rgba modernizr_opacity modernizr_lastchild modernizr_nthchild modernizr_bgpositionxy modernizr_borderradius modernizr_csstransforms">
+
+<head>
+    <meta charset="UTF-8">
+    <title>襄阳市</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/index/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index/common.css">
+    <!-- IE8 HTML5 和  Respond.js 补丁。使 IE8 支持 HTML5 元素和媒体查询 -->
+    <!-- 警告: respond.min.js 不能通过 file:// 形式访问并看到效果。 -->
+    <!--[if lt IE 9]>
+    <script src="/common/3rdLibs/bootstrap/js/html5shiv.min.js"></script>
+    <script src="/common/3rdLibs/bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="../js/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/index/bootstrap.js" type="text/javascript"></script>
+    <script src="../js/index/wdatepicker.js" type="text/javascript"></script>
+    <link href="../css/index/wdatepicker.css" rel="stylesheet" type="text/css">
+    <script src="../js/index/moderlizi.js" type="text/javascript"></script>
+    <script src="../js/index/common.js" type="text/javascript"></script>
+    <script src="../js/index/page.js" type="text/javascript"></script>
+    <script src="../js/index/layout.js" type="text/javascript"></script>
+    <script src="../js/index/layer.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../css/index/layer.css" id="layuicss-layer">
+
+    <script type="text/javascript">
+        // 向js暴露网络根路径。
+        var _system_static_rootPath = "";
+
+        var _biaodanMoBanSaveLocation = "biaodan_moban";
+    </script>
+    <link rel="icon" type="image/x-icon" href="/common/resources/icon/favicon.ico">
+    <link rel="stylesheet" href="../css/index/index.css">
+    <script src="../js/index/moderziner2.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var xingm = '系统管理员';
+        var yonghm = 'admin';
+        var danw = '';
+        danw = danw ? danw : '管理用户';
+    </script>
+    <style>
+        .closeTab:hover {
+            color: #fff;
+            font-weight: bold;
+            background-color: #e00;
+        }
+
+        /* .d{
+            background-image: url();
+        } */
+    </style>
+    <script>
+        //添加选中样式
+        function addstyle(id) {
+            var f = document.getElementById("tabsHeaderRow");
+            var c = f.children;
+            var x = document.getElementById(id);
+            var t = x.classList.contains('active');
+            var iframe = document.getElementById('iframes');
+            if (!t) {
+                x.classList.add('active');
+                iframe.setAttribute('src', x.dataset.url);
+                Array.from(c).forEach(e => {
+                    if (e.id != id) {
+                        document.getElementById(e.id).classList.remove('active');
+                    }
+                });
+                return;
+            }
+        }
+        function addtab(id, context, url) {
+            var f = document.getElementById('tabsHeaderRow');
+            var iframe = document.getElementById('iframes');
+
+            var c = Array.from(f.children);
+            var div = document.createElement('div');
+            div.id = id;
+            div.dataset.oid = id;
+            div.dataset.url = url;
+            div.setAttribute('onclick', `addstyle('${id}')`);
+            div.classList = 'tabHeadTitle';
+            div.classList.add('active');
+            var span = document.createElement('span');
+            span.innerText = context;
+            var span2 = document.createElement('span');
+            span2.classList = 'closeTab';
+            span2.innerText = '×';
+            span2.setAttribute('onclick', `removetab(event,'${id}')`);
+
+            div.appendChild(span);
+            div.appendChild(span2);
+            var bol = c.some(x => x.id == id);
+            if (!bol) {
+                iframe.setAttribute('src', url);
+                f.appendChild(div);
+                c.forEach(e => {
+                    if (e.classList.contains('active')) {
+                        e.classList.remove('active');
+                    }
+                });
+            }
+            c.map(e => {
+                if (e.id == id) {
+                    iframe.setAttribute('src', e.dataset.url)
+                    e.classList.add('active');
+                } else {
+                    e.classList.remove('active')
+                }
+            })
+
+
+
+        }
+        function removetab(e, id) {
+            e.stopPropagation();
+            var f = document.getElementById('tabsHeaderRow');
+            var iframe = document.getElementById('iframes');
+            var now = document.getElementById(id);
+            f.removeChild(now);
+            var c = Array.from(f.children);
+            if (c.length == 1) {
+                iframe.setAttribute('src', c[c.length - 1].dataset.url);
+                c[0].classList.add('active');
+            } else {
+                c[c.length - 1].classList.add('active');
+                c.forEach(e => {
+                    if (e.classList.contains('active')) {
+                        iframe.setAttribute('src', e.dataset.url);
+                    }
+                })
+
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1 class="onlyHtml5Element" style="display: block;">襄州区社会救助服务管理信息系统</h1>
+    <div class="ht-banner-bg onlyHtml5Element" style="display: block;"></div>
+    <img class="ht-logo onlyHtml5Element" src="../asset/htlogo.png"
+        alt="民政主导，公众参与，救助兜底；弘扬传统美德，汇集爱心善举；立足救急解难，救助困难群众；维护公平正义，推进和谐发展。" style="display: inline;">
+    <img class="ht-banner onlyHtml5Element" src="../asset/ht_ba.jpg" style="display: inline;">
+    <div class="ht-biaoti-container onlyHtml5Element" style="display: block;">
+        <div class="ht-left-container">
+            功能导航
+        </div>
+        <div class="ht-right-container">
+            <div class="tabsHeaderNavigator">
+                <span class="glyphicon glyphicon-triangle-left" id="nav_move_left"></span>
+                <span class="glyphicon glyphicon-triangle-right" id="nav_move_right"></span>
+            </div>
+            <div class="tabsHeaderContainer">
+                <div id="tabsHeaderRow">
+                    <div onclick="addstyle('tab1')" id="tab1" data-url="./child/index.html" class="tabHeadTitle active">
+                        <span>首页</span>
+                    </div>
+                    <!-- <div onclick="addstyle('tab2')" id="tab2" class="tabHeadTitle">
+                        <span>查询任务</span><span class="closeTab">×</span>
+                    </div> -->
+                </div>
+            </div>
+            <div class="navigator-toobar">
+                <span class="glyphicon glyphicon-user" id="userinfo_btn" data-placement="bottom">
+                    <!--  onclick="document.getElementById('usermessage').style.display='block'" -->
+                </span>
+                <span class="glyphicon glyphicon-fullscreen" id="maxSize_btn" data-toggle="tooltip"
+                    data-placement="bottom" title="" data-original-title="最大化"></span>
+                <span class="glyphicon glyphicon-modal-window" id="restoreSize_btn" style="display:none;"
+                    data-toggle="tooltip" data-placement="bottom" title="" data-original-title="还原"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#maxSize_btn").click(function () {
+            $("#userinfo_btn").popover('hide');
+            $(".ht-right-content-container").addClass('maxed');
+            $(".ht-biaoti-container").addClass("maxed");
+            $("#maxSize_btn").hide();
+            $("#restoreSize_btn").show();
+        });
+        $("#restoreSize_btn").click(function () {
+            $("#userinfo_btn").popover('hide');
+            $(".ht-right-content-container").removeClass('maxed');
+            $(".ht-biaoti-container").removeClass("maxed");
+            $("#restoreSize_btn").hide();
+            $("#maxSize_btn").show();
+        });
+        $("#userinfo_btn").click(function () {
+            $("#userinfo_btn").popover({
+                container: 'body',
+                // <tr><td>鍗曚綅锛�</td><td class="text-primary">' + danw + '</td></tr>
+                content: `<table class="table table-condensed table-hover" style="margin-bottom:0;"><tbody><tr>	<td>账户：</td><td class="text-primary">admin</td></tr><tr><td>姓名：</td>
+			<td class="text-primary">系统管理员</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center;"><button type="button" onclick="logout();"
+					class="btn btn-danger btn-xs" style="margin-right:10px;">注销</button><button
+					type="button" class="btn btn-success btn-xs"
+					onclick="closeUserInfo()">关闭</button></td>
+		</tr>
+	</tbody>
+</table>`,
+                html: true,
+                title: '用户信息'
+            });
+        });
+        $("#nav_move_left").click(function () {
+            console.log('left')
+            $("#tabsHeaderRow").stop();
+            var left = $("#tabsHeaderRow").position().left;
+            if (left >= 0) {
+                return;
+            } else {
+                left = left + 100;
+                left = left > 0 ? 0 : left;
+                $("#tabsHeaderRow").animate({
+                    left: left + 'px'
+                }, 'fast');
+            }
+        });
+        $("#nav_move_right").click(function () {
+            console.log('right')
+            $("#tabsHeaderRow").stop();
+            var left = $("#tabsHeaderRow").position().left;
+            var width = $("#tabsHeaderRow").width();
+            var widthOfParent = $("#tabsHeaderRow").parent().width();
+            var right = widthOfParent - left - width;
+            if (right >= 0) {
+                return;
+            } else {
+                left = left - 100;
+                left = left > 0 ? 0 : left;
+                $("#tabsHeaderRow").animate({
+                    left: left + 'px'
+                }, 'fast');
+            }
+        });
+        function closeUserInfo() {
+            $("#userinfo_btn").popover('hide');
+        }
+    </script>
+    <script src="../js/index/index.js" type="text/javascript"></script>
+
+    <div class="ht-left-content-container onlyHtml5Element" style="display: block;">
+        <div class="content-container">
+            <div id="mokLinkGroupContainer" class="panel-group" role="tablist">
+                <div class="panel" id="modulsNavigatorPanelContainer">
+                    <div class="panel-heading" role="tab" id="GongNengDaoHangHeader_0">
+                        <h4 class="panel-title"><a role="button" data-toggle="collapse" href="#GongNengDaoHangGroup_0"
+                                aria-expanded="true" aria-controls="GongNengDaoHangGroup_0"><span
+                                    class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>任务管理</a></h4>
+                    </div>
+                    <div id="GongNengDaoHangGroup_0" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="GongNengDaoHangHeader_0" aria-expanded="true">
+                        <div class="panel-seperator"></div>
+                        <div class="list-group"><a mokid="010"   onclick="addtab('chaxunrenwu','新建任务','../html/child/chaxunrenwu.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle" style="margin-right: 10px;"></span>新建任务</a>
+
+                            <a mokid="011" class="list-group-item mokLink" href="javascript:void(0);"
+                                onclick="addtab('chenbaorenwujinzhan','查询任务','../html/child/chaxunrenwu.html')">
+                                <span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>查询任务</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-seperator"></div>
+                <div class="panel" id="modulsNavigatorPanelContainer">
+                    <div class="panel-heading" role="tab" id="GongNengDaoHangHeader_1">
+                        <h4 class="panel-title"><a role="button" data-toggle="collapse" href="#GongNengDaoHangGroup_1"
+                                aria-expanded="true" aria-controls="GongNengDaoHangGroup_1"><span
+                                    class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>绩效评价</a></h4>
+                    </div>
+                    <div id="GongNengDaoHangGroup_1" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="GongNengDaoHangHeader_1" aria-expanded="true">
+                        <div class="panel-seperator"></div>
+                        <div class="list-group"><a mokid="020" class="list-group-item mokLink"
+                                href="javascript:void(0);"
+                                onclick="addtab('chenbao','城保任务完成情况','../html/child/chenbao.html')"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>城保任务完成情况</a>
+
+                            <a mokid="021" class="list-group-item mokLink" href="javascript:void(0);"
+                                onclick="addtab('nongbao','农保任务完成情况','../html/child/nongbao.html')"> <span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>农保任务完成情况</a>
+
+                            <a mokid="022" class="list-group-item mokLink" href="javascript:void(0);"
+                                onclick="addtab('sanwu','三无人员任务完成情况','../html/child/sanwu.html')"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>三无人员任务完成情况</a>
+                            <a mokid="023" class="list-group-item mokLink" href="javascript:void(0);"
+                                onclick="addtab('wubao','五保人员任务完成情况','../html/child/wubao.html')"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>五保人员任务完成情况</a><a mokid="024"
+                                onclick="addtab('linshijiuzhu','临时救助人员任务完成情况', '../html/child/linshijiiuzhu.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>临时救助人员任务完成情况</a>
+
+                            <a mokid="025" onclick="addtab('025','城保任务进展情况', '../html/child/chenbaorenwujinzhan.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>城保任务进展情况</a>
+
+                            <a mokid="026" onclick="addtab('026','农保任务进展情况', '../html/child/nongbaojinzhan.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>农保任务进展情况</a>
+                            <a mokid="027" onclick="addtab('027','三无人员任务进展情况', '../html/child/sanwujinzhan.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>三无人员任务进展情况</a>
+                            <a mokid="028" onclick="addtab('028','五保人员任务进展情况', '../html/child/wubaojindu.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>五保人员任务进展情况</a>
+                            <a mokid="029" onclick="addtab('029','临时救助人员任务进展情况', '../html/child/linshijindu.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>临时救助人员任务进展情况</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-seperator"></div>
+                <div class="panel" id="modulsNavigatorPanelContainer">
+                    <div class="panel-heading" role="tab" id="GongNengDaoHangHeader_2">
+                        <h4 class="panel-title"><a role="button" data-toggle="collapse" href="#GongNengDaoHangGroup_2"
+                                aria-expanded="true" aria-controls="GongNengDaoHangGroup_2"><span
+                                    class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>救助对象管理</a></h4>
+                    </div>
+
+                    <div id="GongNengDaoHangGroup_2" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="GongNengDaoHangHeader_2" aria-expanded="true">
+                        <div class="panel-seperator"></div>
+                        <div class="list-group">
+                        	<a mokid="030"
+                                onclick="addtab('030','救助对象查询', '../html/child/jiuzuduixiang.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>救助对象查询</a>
+                            <a mokid="031"                                   	
+                                onclick="addtab('031','救助对象信息维护', '../html/child/jiuzhuduixiangxinxiweihu.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>救助对象信息维护</a>
+                             
+                             <a mokid="0299"    //调整模块       
+                                onclick="addtab('0299','新增人员导入','../html/child/renyuandaoru.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>新增人员</a>                                   
+                            <a mokid="032"
+                                onclick="addtab('032','城镇低保救助对象家庭定位', '../html/child/jiatingduixiangdingwei.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>城镇低保救助对象家庭定位</a>
+                            <a mokid="033" onclick="addtab('033','农村低保救助对象家庭定位', '../html/child/nongchundingwei.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>农村低保救助对象家庭定位</a>
+                            <a mokid="034" onclick="addtab('034','三无人员救助对象家庭定位', '../html/child/dingwei1.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>三无人员救助对象家庭定位</a>
+                            <a mokid="035" onclick="addtab('035','五保人员救助对象家庭定位', '../html/child/dingwei3.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>五保人员救助对象家庭定位</a>
+                            <a mokid="036" onclick="addtab('036','临时救助人员救助对象家庭定位', '../html/child/dingwei2.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>临时救助人员救助对象家庭定位</a>
+                            <a mokid="037"
+                                onclick="addtab('linshijiuzhu','临时救助人员任务完成情况', '../html/child/linshijiiuzhu.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>救助对象统计分析</a>
+                            <a mokid="0377" onclick="addtab('chengbaojiatingjingjihedui','城保家庭经济状况核对',`
+                             http://58.18.141.124:8888/MinZhengYW/JiuZhuKe/JiaTingJingJiHD/chengzhendibao/index.php?username=150421&amp;password=202cb962ac59075b964b07152d234b70
+                            `)" mokurl="http://58.18.141.124:8888/MinZhengYW/JiuZhuKe/JiaTingJingJiHD/chengzhendibao/index.php?username=150421&amp;password=202cb962ac59075b964b07152d234b70"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>城保家庭经济状况核对</a>
+                            <a mokid="038" onclick="addtab('nongchunjiatingjingjihedui','农保家庭经济状况核对',`
+                            http://58.18.141.124:8888/MinZhengYW/JiuZhuKe/JiaTingJingJiHD/nongcundibao/index.php?username=150421&amp;password=202cb962ac59075b964b07152d234b70
+                            `)" mokurl="http://58.18.141.124:8888/MinZhengYW/JiuZhuKe/JiaTingJingJiHD/nongcundibao/index.php?username=150421&amp;password=202cb962ac59075b964b07152d234b70"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>农保家庭经济状况核对</a><a mokid="039" onclick="addtab('wubaorenyuanhedui','五保人员家庭经济状况核对',`
+                          http://58.18.141.124:8888/MinZhengYW/JiuZhuKe/JiaTingJingJiHD/wubaorenyuan/index.php?username=150421&amp;password=202cb962ac59075b964b07152d234b70
+                            `)" mokurl="http://58.18.141.124:8888/MinZhengYW/JiuZhuKe/JiaTingJingJiHD/wubaorenyuan/index.php?username=150421&amp;password=202cb962ac59075b964b07152d234b70"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>五保人员家庭经济状况核对</a>
+
+                            <a mokid="040" onclick="addtab('040','三无人员家庭经济状况核对',`
+                          http://58.18.141.124:8888/MinZhengYW/JiuZhuKe/JiaTingJingJiHD/sanwurenyuan/index.php?username=150421&amp;password=202cb962ac59075b964b07152d234b70
+                            `)" mokurl="http://58.18.141.124:8888/MinZhengYW/JiuZhuKe/JiaTingJingJiHD/sanwurenyuan/index.php?username=150421&amp;password=202cb962ac59075b964b07152d234b70"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>三无人员家庭经济状况核对</a><a mokid="JZDXXZRYJTJJZKHD-KSHD"
+                                onclick="addtab('JZDXXZRYJTJJZKHD','家庭经济状况核对',`
+                         http://58.18.141.124:8888/MinZhengYW/JiuZhuKe/JiaTingJingJiHD/XinZengRenYuan/HeDui.php?username=150421&amp;password=202cb962ac59075b964b07152d234b70
+                            `)" mokurl="http://58.18.141.124:8888/MinZhengYW/JiuZhuKe/JiaTingJingJiHD/XinZengRenYuan/HeDui.php?username=150421&amp;password=202cb962ac59075b964b07152d234b70"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>家庭经济状况核对</a><a mokid="JZDXXZRYJTJJZKHD-LSRWCX"
+                                onclick="addtab('LSRWCX','家庭经济状况核对历史任务查询',`
+                                   http://58.18.141.124:8888/MinZhengYW/JiuZhuKe/JiaTingJingJiHD/XinZengRenYuan/RenWChaKan.php?username=150421&amp;password=202cb962ac59075b964b07152d234b70
+                                       `)"
+                                mokurl="http://58.18.141.124:8888/MinZhengYW/JiuZhuKe/JiaTingJingJiHD/XinZengRenYuan/RenWChaKan.php?username=150421&amp;password=202cb962ac59075b964b07152d234b70"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>家庭经济状况核对历史任务查询</a><a
+                                mokid="JZDXXZRYJTJJZKHD-XJHD" onclick="addtab('XJHD','新建家庭经济状况核对任务',`
+                                  http://58.18.141.124:8888/MinZhengYW/JiuZhuKe/JiaTingJingJiHD/XinZengRenYuan/ChengBaoXinZeng.php?username=150421&amp;password=202cb962ac59075b964b07152d234b70
+                                       `)"
+                                mokurl="http://58.18.141.124:8888/MinZhengYW/JiuZhuKe/JiaTingJingJiHD/XinZengRenYuan/ChengBaoXinZeng.php?username=150421&amp;password=202cb962ac59075b964b07152d234b70"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>新建家庭经济状况核对任务</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-seperator"></div>
+                <div class="panel" id="modulsNavigatorPanelContainer">
+                    <div class="panel-heading" role="tab" id="GongNengDaoHangHeader_3">
+                        <h4 class="panel-title"><a role="button" data-toggle="collapse" href="#GongNengDaoHangGroup_3"
+                                aria-expanded="true" aria-controls="GongNengDaoHangGroup_3"><span
+                                    class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>调查电子档案</a></h4>
+                    </div>
+                    <div id="GongNengDaoHangGroup_3" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="GongNengDaoHangHeader_3" aria-expanded="true">
+                        <div class="panel-seperator"></div>
+                        <div class="list-group"><a mokid="041"
+                                onclick="addtab('041','照片档案', `../html/child/photo.html`)"
+                                mokurl="/HouTai/PhotoShoot/ZhaoPianGuanLi.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>照片档案</a><a mokid="042"
+                                
+                                onclick="addtab('043','电子档案下载', `../html/child/photo2.html`)"
+                                mokurl="/HouTai/DianZiDangAn/index.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>电子档案下载</a><a mokid="045"
+                                onclick="addtab('045','批量电子档案下载', `../html/child/download.html`)"
+                                mokurl="/HouTai/DianZiDangAn/QuYuDianZiDangAn.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>批量电子档案下载</a></div>
+                    </div>
+                </div>
+                <div class="panel-seperator"></div>
+                <div class="panel" id="modulsNavigatorPanelContainer">
+                    <div class="panel-heading" role="tab" id="GongNengDaoHangHeader_4">
+                        <h4 class="panel-title"><a role="button" data-toggle="collapse" href="#GongNengDaoHangGroup_4"
+                                aria-expanded="true" aria-controls="GongNengDaoHangGroup_4"><span
+                                    class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>调查报告</a></h4>
+                    </div>
+                    <div id="GongNengDaoHangGroup_4" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="GongNengDaoHangHeader_4" aria-expanded="true">
+                        <div class="panel-seperator"></div>
+                        <div class="list-group"><a mokid="050"
+                                onclick="addtab('050','家庭调查报告', `../html/child/diaochabaogao.html`)"
+                                mokurl="/HouTai/DiaoChaBaoGao/JiaTingBaoGao.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>家庭调查报告</a><a mokid="051"
+                                onclick="addtab('051','区域调查报告', `../html/child/areadiaocha.html`)"
+                                mokurl="/HouTai/DiaoChaBaoGao/QuYuBaoGao.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>区域调查报告</a></div><a mokid="042"
+                                onclick="addtab('042','调查问卷', `../html/child/photo1.html`)"
+                                mokurl="/HouTai/PhotoShoot/DiaoChaWenJuan.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>调查问卷</a><a mokid="043"
+                    </div>
+                </div>
+                <div class="panel-seperator"></div>
+                <div class="panel" id="modulsNavigatorPanelContainer">
+                    <div class="panel-heading" role="tab" id="GongNengDaoHangHeader_5">
+                        <h4 class="panel-title"><a role="button" data-toggle="collapse" href="#GongNengDaoHangGroup_5"
+                                aria-expanded="true" aria-controls="GongNengDaoHangGroup_5"><span
+                                    class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>经办人员管理</a></h4>
+                    </div>
+                    <div id="GongNengDaoHangGroup_5" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="GongNengDaoHangHeader_5" aria-expanded="true">
+                        <div class="panel-seperator"></div>
+                        <div class="list-group"><a mokid="060"
+                                onclick="addtab('060','经办人员信息管理', `../html/child/jingbanrenyuan.html`)"
+                                mokurl="/HouTai/ReceptionYongHu/DiaoChaYuan.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>经办人员信息管理</a><a mokid="061"
+                                onclick="addtab('061','经办人员定位', `../html/child/jingbanrenyuandingwei.html`)"
+                                mokurl="/HouTai/DingWei/DiaoChaYuan.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>经办人员定位</a><a mokid="062"
+                                onclick="addtab('042','经办人员轨迹', `../html/child/jingbanrenyuanguiji.html`)"
+                                mokurl="/HouTai/DingWei/DiaoChaYuanYunXingGuiJi.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>经办人员轨迹</a></div>
+                    </div>
+                </div>
+                <!--<div class="panel-seperator"></div>
+                <div class="panel" id="modulsNavigatorPanelContainer">
+                    <div class="panel-heading" role="tab" id="GongNengDaoHangHeader_6">
+                        <h4 class="panel-title"><a role="button" data-toggle="collapse" href="#GongNengDaoHangGroup_6"
+                                aria-expanded="true" aria-controls="GongNengDaoHangGroup_6"><span
+                                    class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>政策发布和解读</a></h4>
+                    </div>
+                    <div id="GongNengDaoHangGroup_6" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="GongNengDaoHangHeader_6" aria-expanded="true">
+                        <div class="panel-seperator"></div>
+                        <div class="list-group"><a mokid="070"
+                                onclick="addtab('070','政策编辑', `../html/child/tongzhi.html`)"
+                                mokurl="/HouTai/ZhengCe/ZhengCeGuanLi.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>政策编辑</a><a mokid="071"
+                                onclick="addtab('071','政策发布', `../html/child/fabu.html`)"
+                                mokurl="/HouTai/ZhengCe/ZhengCeChaKan.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>政策发布</a></div>
+                    </div>
+                </div>-->
+                <!--<div class="panel-seperator"></div>
+                <div class="panel" id="modulsNavigatorPanelContainer">
+                    <div class="panel-heading" role="tab" id="GongNengDaoHangHeader_7">
+                        <h4 class="panel-title"><a role="button" data-toggle="collapse" href="#GongNengDaoHangGroup_7"
+                                aria-expanded="true" aria-controls="GongNengDaoHangGroup_7"><span
+                                    class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>通知公告</a></h4>
+                    </div>
+                    <div id="GongNengDaoHangGroup_7" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="GongNengDaoHangHeader_7" aria-expanded="true">
+                        <div class="panel-seperator"></div>
+                        <div class="list-group">
+                        	    <a mokid="080"
+                                onclick="addtab('080','通知编辑', `../html/child/tongzhibianji.html`)"
+                                mokurl="/HouTai/TongZhi/TongZhiGuanLi.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>通知编辑</a>
+                                <a mokid="081"
+                                onclick="addtab('081','通知查看', `../html/child/tongzhichakan.html`)"
+                                mokurl="/HouTai/TongZhi/TongZhiChaKan.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>通知查看</a></div>
+                    </div>
+                </div>-->
+                <div class="panel-seperator"></div>
+                <div class="panel" id="modulsNavigatorPanelContainer">
+                    <div class="panel-heading" role="tab" id="GongNengDaoHangHeader_8">
+                        <h4 class="panel-title"><a role="button" data-toggle="collapse" href="#GongNengDaoHangGroup_8"
+                                aria-expanded="true" aria-controls="GongNengDaoHangGroup_8"><span
+                                    class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>工作动态</a></h4>
+                    </div>
+                    <div id="GongNengDaoHangGroup_8" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="GongNengDaoHangHeader_8" aria-expanded="true">
+                        <div class="panel-seperator"></div>
+                        <div class="list-group"><a mokid="082"
+                                onclick="addtab('082','工作动态分类管理', `../html/child/gongzuodongtai.html`)"
+                                mokurl="/HouTai/GongZuoDongTai/GongZuoDongTaiFenLei.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>工作动态分类管理</a><a mokid="083"
+                                onclick="addtab('083','工作动态管理', `../html/child/gongzuodongtaiguanli.html`)"
+                                mokurl="/HouTai/GongZuoDongTai/GongZuoDongTaiGuanLi.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>工作动态管理</a><a mokid="084"
+                                onclick="addtab('084','工作动态查看', `../html/child/gongzuodongtaichakan.html`)"
+                                mokurl="/HouTai/GongZuoDongTai/GongZuoDongTaiChaKan.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>工作动态查看</a></div>
+                    </div>
+                </div>
+                <!--<div class="panel-seperator"></div>
+                <div class="panel" id="modulsNavigatorPanelContainer">
+                    <div class="panel-heading" role="tab" id="GongNengDaoHangHeader_9">
+                        <h4 class="panel-title"><a role="button" data-toggle="collapse" href="#GongNengDaoHangGroup_9"
+                                aria-expanded="true" aria-controls="GongNengDaoHangGroup_9"><span
+                                    class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>办事指南</a></h4>
+                    </div>
+                    <div id="GongNengDaoHangGroup_9" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="GongNengDaoHangHeader_9" aria-expanded="true">
+                        <div class="panel-seperator"></div>
+                        <div class="list-group">
+                        	<a mokid="085"
+                                onclick="addtab('085','办事指南编辑', `../html/child/zhinanbianji.html`)"
+                                mokurl="/HouTai/BanShiZhiNan/BanShiGuanLi.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>办事指南编辑</a>
+                            <a mokid="086"
+                                onclick="addtab('086','办事指南发布', `../html/child/zhinanfabu.html`)"
+                                mokurl="/HouTai/BanShiZhiNan/BanShiChaKan.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>办事指南发布</a></div>
+                    </div>
+                </div>-->
+                <div class="panel-seperator"></div>
+                <div class="panel" id="modulsNavigatorPanelContainer">
+                    <div class="panel-heading" role="tab" id="GongNengDaoHangHeader_10">
+                        <h4 class="panel-title"><a role="button" data-toggle="collapse" href="#GongNengDaoHangGroup_10"
+                                aria-expanded="true" aria-controls="GongNengDaoHangGroup_10"><span
+                                    class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>系统设置</a></h4>
+                    </div>
+                    <div id="GongNengDaoHangGroup_10" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="GongNengDaoHangHeader_10" aria-expanded="true">
+                        <div class="panel-seperator"></div>
+                        <div class="list-group">
+                        	
+                        	    <a mokid="090" onclick="addtab('090','用户管理', `../html/child/user.html`)"
+                                mokurl="/HouTai/YongHu/index.php" class="list-group-item mokLink"
+                                href="javascript:void(0);">
+                                <span class="glyphicon glyphicon-play-circle"style="margin-right: 10px;"></span>用户管理</a>
+                                
+                                <a mokid="091" onclick="addtab('091','修改密码', `../html/child/xiugai.html`)"
+                                mokurl="/HouTai/YongHu/XiuGaiMiMa.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle" 
+                                style="margin-right: 10px;"></span>修改密码</a>
+                                
+                                <a mokid="093" onclick="addtab('093','权限管理', `../html/child/role.html`)"
+                                mokurl="/HouTai/YongHu/QUanXianIndex.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>权限管理</a>
+                                    
+                                                                  
+                                <a mokid="094" onclick="addtab('094','数据同步', `../html/child/data.html`)"
+                                mokurl="/HouTai/ShuJuTongBu/index.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>数据同步</a>
+                                    
+                                <a mokid="095" onclick="addtab('095','调查问卷表格分类', `../html/child/tab.html`)"
+                                mokurl="/HouTai/WenJuan/BGFL.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                style="margin-right: 10px;"></span>调查问卷表格分类</a>
+                                    
+                                    
+                                <a mokid="096" onclick="addtab('096','调查问卷问卷管理', `../html/child/wenjuanguanli.html`)"
+                                mokurl="/HouTai/WenJuan/WenJuan.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                style="margin-right: 10px;"></span>调查问卷问卷管理</a>
+                                    
+                                <a mokid="097" onclick="addtab('097','调查问卷数据项管理', `../html/child/wenjuandata.html`)"
+                                mokurl="/HouTai/WenJuan/ShuJuXiang.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                style="margin-right: 10px;"></span>调查问卷数据项管理</a>
+                                    
+                                <a mokid="098" onclick="addtab('098','家庭家计调查拍摄分类', `../html/child/home.html`)"
+                                mokurl="/HouTai/PhotoShoot/PhotoShoot.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                style="margin-right: 10px;"></span>家庭家计调查拍摄分类</a>
+                                    
+                                <a mokid="110" onclick="addtab('110','调查问卷模板管理', `../html/child/diaocha.html`)"
+                                mokurl="/HouTai/MoBan/index.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                style="margin-right: 10px;"></span>调查问卷模板管理</a></div>
+                                                              <!--调整办事指南-->
+                                <a mokid="070" onclick="addtab('070','政策编辑', `../html/child/tongzhi.html`)"
+                                mokurl="/HouTai/ZhengCe/ZhengCeGuanLi.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                style="margin-right: 10px;"></span>政策编辑</a>
+                                    
+                                <a mokid="071" onclick="addtab('071','政策发布', `../html/child/fabu.html`)"
+                                mokurl="/HouTai/ZhengCe/ZhengCeChaKan.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                style="margin-right: 10px;"></span>政策发布</a>
+                    
+                    
+                                <a mokid="080" onclick="addtab('080','通知编辑', `../html/child/tongzhibianji.html`)"
+                                mokurl="/HouTai/TongZhi/TongZhiGuanLi.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>通知编辑</a>
+                                    
+                                    
+                                <a mokid="081" onclick="addtab('081','通知查看', `../html/child/tongzhichakan.html`)"
+                                mokurl="/HouTai/TongZhi/TongZhiChaKan.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                               style="margin-right: 10px;"></span>通知查看</a>
+                                    
+                                <a mokid="085" onclick="addtab('085','办事指南编辑', `../html/child/zhinanbianji.html`)"
+                                mokurl="/HouTai/BanShiZhiNan/BanShiGuanLi.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                                style="margin-right: 10px;"></span>办事指南编辑</a>
+                                
+                                
+                                <a mokid="086" onclick="addtab('086','办事指南发布', `../html/child/zhinanfabu.html`)"
+                                mokurl="/HouTai/BanShiZhiNan/BanShiChaKan.php" class="list-group-item mokLink"
+                                href="javascript:void(0);"><span class="glyphicon glyphicon-play-circle"
+                               style="margin-right: 10px;"></span>办事指南发布</a>
+                    
+                    
+                             </div>
+                                 
+                                 
+                              
+                                                              
+                                                              
+                                                             
+                    </div>
+                </div>
+                <!--<div class="panel-seperator"></div>
+                <div class="panel" id="modulsNavigatorPanelContainer">
+                    <div class="panel-heading" role="tab" id="GongNengDaoHangHeader_11">
+                        <h4 class="panel-title"><a role="button" data-toggle="collapse" href="#GongNengDaoHangGroup_11"
+                                aria-expanded="true" aria-controls="GongNengDaoHangGroup_11"><span
+                                    class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>新增人员</a></h4>
+                    </div>
+                    <div id="GongNengDaoHangGroup_11" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="GongNengDaoHangHeader_11" aria-expanded="true">
+                        <div class="panel-seperator"></div>
+                        <div class="list-group"><a mokid="120"
+                                onclick="addtab('renyuandaoru','新增人员导入','../html/child/renyuandaoru.html')"
+                                class="list-group-item mokLink" href="javascript:void(0);"><span
+                                    class="glyphicon glyphicon-play-circle"
+                                    style="margin-right: 10px;"></span>新增人员导入</a></div>
+                    </div>
+                </div>-->
+                
+                <div class="panel-seperator"></div>
+            </div>
+        </div>
+    </div>
+    <div class="ht-right-content-container onlyHtml5Element" style="display: block;">
+        <div class="content-container" id="frameContainer">
+            <iframe class="frame-component" id="iframes" mokid="010" src="./child/index.html"
+                mokname="首页"></iframe>
+        </div>
+    </div>
+    <div class="ht-bottom-container onlyHtml5Element" style="display: block;">
+
+    </div>
+    <div class="notHtml5Element" style="display: none;">
+        <img alt="" src="../asset/logo.png">
+        <h2 class="text-primary">管理系统</h2>
+        <p class="text-danger warning large"><span class="glyphicon glyphicon-alert"></span>&nbsp;&nbsp;您使用的浏览器不安全。</p>
+        <p class="text-danger warning">请您使用最新最安全的浏览器进入系统，并获得最佳使用体验。</p>
+        <p class="warning"><a class="btn btn-success" target="_blank"
+                href="https://www.baidu.com/s?wd=Google%20Chrome">Google Chrome</a></p>
+        <p class="warning"><a class="btn btn-warning" target="_blank"
+                href="https://www.baidu.com/s?wd=Firefox">Firefox</a></p>
+        <p class="warning"><a class="btn btn-primary" target="_blank"
+                href="https://www.baidu.com/s?wd=Internet%20Explorer">Internet Explorer</a></p>
+        <p class="text-danger warning"><span
+                class="glyphicon glyphicon-alert"></span>&nbsp;&nbsp;请注意，一定要使用官方下载地址，以防被附带安装垃圾软件。</p>
+        <p class="warning"><button id="enterwithoutpermission" class="btn btn-danger" type="button">我要直接进入</button></p>
+    </div>
+    <div class="popover fade bottom in" role="tooltip" id="usermessage" style="top: 127px; left:81%; display: none;">
+        <div class="arrow" style="left: 80.8571%;"></div>
+        <h3 class="popover-title">用户信息</h3>
+        <div class="popover-content">
+            <table class="table table-condensed table-hover" style="margin-bottom:0;">
+                <tbody>
+                    <tr>
+                        <td>账户：</td>
+                        <td class="text-primary">admin</td>
+                    </tr>
+                    <tr>
+                        <td>姓名：</td>
+                        <td class="text-primary">系统管理员</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:center;"><button type="button" onclick="logout();"
+                                class="btn btn-danger btn-xs" style="margin-right:10px;">注销</button><button
+                                type="button" class="btn btn-success btn-xs"
+                                onclick="document.getElementById('usermessage').style.display='none'">关闭</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
