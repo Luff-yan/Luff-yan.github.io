@@ -1,4 +1,5 @@
-idea中git上传文件：
+# 1.idea中git上传文件：
+
 新建文件-->右键git-->commit file-->写备注-->点击commit-->
 右击文件git-respontity-->上传
 
@@ -28,8 +29,8 @@ g. git push origin main
 注：g 中的分支 master 改成 main,(master有种族歧视）
 只需要执行efg
 
+# 2.git下拉文件：
 
-git下拉文件：
 a. git fetch 获取remote中最新的修改
 b. git pull 将remote中的文件拉取到本地
 
@@ -43,8 +44,8 @@ b. git pull 将remote中的文件拉取到本地
 
 注：上传文件和下拉文件一定要在家目录下
 
+# 3.git 删除文件：
 
-git 删除文件：
 a.删除本地文件 rm xxx
 b.删除本库中的文件 git rm xxx
 c.提交说明 git commit -m "删除文件"
@@ -52,26 +53,26 @@ d.提交 git push origin main
 
 
 注：使用 rm 命令删除文件一定要慎重。  
-  
 
-出现错误：
+# 4.出现的错误：
+
 ![rejected] main -> main (non-fast-forward)
 error:failed to push some refs to xxxxxx
 可以使用强制覆盖：
 git push -f origin main
 
+## 4.1git拉取项目强制覆盖本地命令：
 
-git拉取项目强制覆盖本地命令：
 git fetch --all
 git reset --hard origin/main
 git pull
 
+# 5.git网速太慢：
 
-git网速太慢：
 可以使用 github.global.ssl.fastly.net 的ip
 
+# 6.git 新建分支：
 
-git 新建分支：
 1) 切换到基础分支，如主干
 git checkout main
 
@@ -86,8 +87,8 @@ git push origin devlop
 
 4)在git代码管理界面经可以看到devlop分支了。
 
+# 7.git合并分支：
 
-git合并分支：
 1)切换到主分支
 git checkout main
 
